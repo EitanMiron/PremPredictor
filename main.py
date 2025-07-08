@@ -143,15 +143,14 @@ driver.get(shooting_url)
 team_soup = BeautifulSoup(driver.page_source, "html.parser")
 driver.quit()
 
-# Now look for the shooting table by ID 'stats_shooting_9'
-# This ID may vary, so ensure it matches the actual table ID on the page
+
 
 shooting_table = team_soup.find("table", id="matchlogs_for")
 
 #print(shooting_table)
 
 #extract the data from the shooting table
-shooting_data = []
+shooting_data = [] 
 for row in shooting_table.tbody.find_all("tr"):
     cols = row.find_all("td")
     if cols:
@@ -237,7 +236,7 @@ for year in years:
         standings_url = f"https://fbref.com{prev_link.get('href')}"
     
     for team_url in team_urls:
-        team_name = team_url.split("/")[-1].replace("-Stats", "").replace("-", " ")
+        team_name = team_url.split("/")[-1].replace("-Stats", "").replace("-", " ") #cleans the team name from the team URL
         
         # Scrape fixtures using Selenium
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
@@ -300,23 +299,31 @@ for year in years:
         
         shooting_df = pd.DataFrame(shooting_data)
         
-        # Merge
+        # Merge with accounting for teams that shooting data is not avaible as this would give a ValueError 
         try:
             team_df = fixtures_df.merge(shooting_df, on="Date")
         except Exception as e:
             print(f"Merge failed for {team_name}: {e}")
             continue
         
+        #Filter out other competitions than Premier League
+        team_df = team_df[team_df["Competition"] == "Premier League"]
+        
+        # Add season and team name columns to distinguish data for which season and team the data is for
         team_df["Season"] = year
         team_df["Team"] = team_name
+        
         all_seasons_data.append(team_df)
         time.sleep(3)
 
 print(f"Collected data for {len(all_seasons_data)} team-seasons.")
 
+#combine all seasons data into a single DataFrame
 team_df = pd.concat(all_seasons_data)
 team_df.columns = [c.lower() for c in team_df.columns]
-print(team_df)
+#print(team_df)
+
+# Save the DataFrame to a CSV file
 team_df.to_csv("matches_data.csv", index=False)
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------------------------------
