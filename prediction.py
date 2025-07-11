@@ -102,3 +102,6 @@ merged = merged_df.merge(merged_df, left_on=["date", "new_team"], right_on=["dat
 #print(merged[(merged["prediction_x"] == 1) & (merged["prediction_y"] == 0)]["actual_x"].value_counts())
 
 print(merged)
+
+
+
