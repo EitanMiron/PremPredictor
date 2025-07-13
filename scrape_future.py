@@ -8,6 +8,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
+import datetime
+from datetime import datetime
 
 options = Options()
 options.add_argument("--headless")
@@ -27,21 +29,50 @@ driver.quit()
 matchweek_num = soup.find("h2", class_="match-list-header__title").text.strip()
 #print(matchweek_one)
 
-#get the matchweek date
-#matchweek_date = soup.find("span", class_="match-list__day-date").text.strip()
-#print(matchweek_date)
+
 
 #get the match fixtures from the matchweek
 matches = soup.find_all("div", class_="match-card__info")
+# All the match day containers (each one corresponds to a date)
+match_days = soup.find_all("div", class_="match-list__day")
 
-for match in matches:
+def convert_match_date(date_str):
+    #convert date format from e.g "Fri 15 Aug" to YYYY-MM-DD
+    date_parts = date_str.split()
+    if len(date_parts) != 3:
+        return None
+    day = date_parts[1]
+    month = date_parts[2]
+
+    # Get the current year (either 2025 or 2026 depending on month of the match)
+    year = 2025 if month in ['Aug', 'Sep', 'Oct', 'Nov', 'Dec'] else 2026
+
+    full_date_str = f"{year}-{month}-{day.zfill(2)}"
+
+    #convert to datetime object
     try:
-        home_team = match.find("div", class_="match-card__team--home").find("span", class_="match-card__team-name--full").text.strip()
-        away_team = match.find("div", class_="match-card__team--away").find("span", class_="match-card__team-name--full").text.strip()
-        match_time = match.find("span", class_="match-card__kickoff-time").text.strip()
-        #matchweek_date = soup.find("span", class_="match-list__day-date").text.strip()
+        return datetime.strptime(full_date_str, "%Y-%b-%d").date()
+    except ValueError:
+        return None
 
-        #(f"Home: {home_team}, Away: {away_team}, Time: {match_time}, Date: {matchweek_date}")
-    except AttributeError:
-        # In case any part of the HTML isn't found
-        print("Match parsing failed. Skipping.")
+for day in match_days:
+    # Get the match date
+    date_container = day.find("span", class_="match-list__day-date")
+    raw_date = date_container.text.strip() if date_container else "Unknown Date"
+    match_date = convert_match_date(raw_date)
+
+    # Get all matches under this date
+    matches = day.find_all("div", class_="match-card__info")
+
+    for match in matches:
+        try:
+            home_team = match.find("div", class_="match-card__team--home").find("span", class_="match-card__team-name--full").text.strip()
+            away_team = match.find("div", class_="match-card__team--away").find("span", class_="match-card__team-name--full").text.strip()
+            match_time = match.find("span", class_="match-card__kickoff-time").text.strip()
+
+            print(f"Date: {match_date}, Time: {match_time}, Home: {home_team}, Away: {away_team}")
+        except AttributeError:
+            print("Match parsing failed. Skipping.")
+
+#Now need to scrape data for each set of fixtures for all matchweeks
+
