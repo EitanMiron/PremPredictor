@@ -2,6 +2,10 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, WebDriverException, NoSuchWindowException, InvalidSessionIdException
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -9,18 +13,80 @@ import time
 
 
 options = Options()
-options.add_argument("--headless")
+# Running in non-headless mode to avoid Cloudflare bot protection
+# Uncomment the next line if you want headless mode (may trigger Cloudflare protection):
+# options.add_argument("--headless")
 options.add_argument("--disable-gpu")
 options.add_argument("window-size=1920,1080")
+options.add_argument("--disable-blink-features=AutomationControlled")
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver.set_page_load_timeout(90)
 url = "https://fbref.com/en/comps/9/Premier-League-Stats"
-driver.get(url)
-# Wait for the page to load
-time.sleep(5)  # Adjust the sleep time as necessary
+try:
+    driver.get(url)
+except TimeoutException:
+    print("Page load timed out, but continuing...")
+    driver.execute_script("window.stop();")
+except InvalidSessionIdException:
+    print("❌ Browser session lost (browser closed or crashed). Exiting...")
+    exit(1)
+except WebDriverException as e:
+    print(f"WebDriverException encountered: {e}")
+    print("Attempting to proceed as the page might have redirected...")
 
-soup = BeautifulSoup(driver.page_source, "html.parser")
-driver.quit()
+# Give user time to complete Cloudflare challenge manually (only for initial load)
+print("\n" + "="*60)
+print("ATTENTION: If you see a Cloudflare challenge page,")
+print("please complete the verification manually in the browser window.")
+print("The script will wait for you to finish...")
+print("="*60 + "\n")
+
+# Wait for user to complete Cloudflare challenge - check every 2 seconds
+# Up to 2 minutes (120 seconds) for manual verification
+max_wait_time = 120
+wait_interval = 2
+elapsed_time = 0
+
+print("Waiting for page to load and Cloudflare challenge to complete...")
+while elapsed_time < max_wait_time:
+    try:
+        # Check if the page has loaded by looking for the table
+        wait = WebDriverWait(driver, 2)
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table.stats_table")))
+        print("✓ Page loaded successfully!")
+        time.sleep(2)  # Extra wait to ensure everything is rendered
+        break
+    except NoSuchWindowException:
+        print("❌ Browser window closed. Exiting...")
+        exit(1)
+    except InvalidSessionIdException:
+        print("❌ Browser session lost. Exiting...")
+        exit(1)
+    except:
+        elapsed_time += wait_interval
+        if elapsed_time % 10 == 0:  # Print progress every 10 seconds
+            print(f"Still waiting... ({elapsed_time}/{max_wait_time} seconds)")
+        time.sleep(wait_interval)
+else:
+    print(f"\n⚠ Warning: Timeout after {max_wait_time} seconds.")
+    print("The page may still be loading. Proceeding anyway...")
+
+try:
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+except NoSuchWindowException:
+    print("❌ Browser window closed. Exiting...")
+    exit(1)
+except InvalidSessionIdException:
+    print("❌ Browser session lost. Exiting...")
+    exit(1)
+except Exception as e:
+    print(f"❌ Error getting page source: {e}")
+    exit(1)
+
+# driver.quit() # Keeping driver open
 
 # tables = soup.find_all("table")
 # print(f"Found {len(tables)} tables")
@@ -28,11 +94,26 @@ driver.quit()
 #     print(table.get("id"))
 
 
+# Try to find the table - check if it exists before using it
 current_table = soup.find("table", id="results2024-202591_overall")
+if current_table is None:
+    # Try alternative: find any table with stats_table class
+    current_table = soup.select_one('table.stats_table')
+    if current_table is None:
+        print("ERROR: Could not find standings table. This may be due to Cloudflare blocking.")
+        print("Please ensure the page loaded correctly or try running the script again.")
+        driver.quit()
+        exit(1)
+
 #print(current_table)
 
 #Extract the data from the table
 current_table_data = []
+if current_table.tbody is None:
+    print("ERROR: Table found but has no tbody element.")
+    driver.quit()
+    exit(1)
+
 for row in current_table.tbody.find_all("tr"):
     cols = row.find_all("td")
     if cols:
@@ -81,13 +162,49 @@ team_url = team_urls[0]  # Example: using the first team URL
 #print(team_url)
 
 # Open team page with Selenium
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver.get(team_url)
+# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+try:
+    driver.get(team_url)
+except TimeoutException:
+    print("Page load timed out, but continuing...")
+    driver.execute_script("window.stop();")
+except InvalidSessionIdException:
+    print("❌ Browser session lost. Exiting...")
+    exit(1)
+except WebDriverException as e:
+    print(f"WebDriverException encountered: {e}")
+    print("Attempting to proceed...")
+
+# Wait for team page to load
+max_wait_time = 60
+wait_interval = 2
+elapsed_time = 0
+
+while elapsed_time < max_wait_time:
+    try:
+        wait = WebDriverWait(driver, 2)
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table#matchlogs_for")))
+        break
+    except:
+        elapsed_time += wait_interval
+        time.sleep(wait_interval)
+
 team_soup = BeautifulSoup(driver.page_source, "html.parser")
-driver.quit()
+# driver.quit()
 
 # Now look for the fixtures table by ID  'matchlogs_for'
 fixtures_table = team_soup.find("table", id="matchlogs_for")
+if fixtures_table is None:
+    print("ERROR: Could not find fixtures table (matchlogs_for) on team page.")
+    print("This is a test section - the main scraping loop will handle this better.")
+    driver.quit()
+    exit(1)
+
+if fixtures_table.tbody is None:
+    print("ERROR: Fixtures table found but has no tbody element.")
+    driver.quit()
+    exit(1)
+
 #print(fixtures_table)
 #Iterate through the rows of the fixtures table and create a pandas DataFrame
 fixtures_data = []
@@ -138,14 +255,47 @@ fixtures_df = pd.DataFrame(fixtures_data)
 
 # # Use Selenium to get the shooting stats table
 shooting_url = "https://fbref.com/en/squads/822bd0ba/2024-2025/matchlogs/all_comps/shooting/Liverpool-Match-Logs-All-Competitions"
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver.get(shooting_url)
-team_soup = BeautifulSoup(driver.page_source, "html.parser")
-driver.quit()
+# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+try:
+    driver.get(shooting_url)
+except TimeoutException:
+    print("Page load timed out, but continuing...")
+    driver.execute_script("window.stop();")
+except InvalidSessionIdException:
+    print("❌ Browser session lost. Exiting...")
+    exit(1)
+except WebDriverException as e:
+    print(f"WebDriverException encountered: {e}")
+    print("Attempting to proceed...")
 
+# Wait for shooting page to load
+max_wait_time = 60
+wait_interval = 2
+elapsed_time = 0
 
+while elapsed_time < max_wait_time:
+    try:
+        wait = WebDriverWait(driver, 2)
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table#matchlogs_for")))
+        break
+    except:
+        elapsed_time += wait_interval
+        time.sleep(wait_interval)
 
-shooting_table = team_soup.find("table", id="matchlogs_for")
+shooting_soup = BeautifulSoup(driver.page_source, "html.parser")
+# driver.quit()
+
+shooting_table = shooting_soup.find("table", id="matchlogs_for")
+
+if shooting_table is None:
+    print("ERROR: Could not find shooting table (matchlogs_for) on shooting page.")
+    driver.quit()
+    exit(1)
+
+if shooting_table.tbody is None:
+    print("ERROR: Shooting table found but has no tbody element.")
+    driver.quit()
+    exit(1)
 
 #print(shooting_table)
 
@@ -200,7 +350,7 @@ merged_df = pd.merge(
 
 
 #now create a loop to scrape multiple seasons
-years = list(range(2025, 2022, -1))
+years = list(range(2025, 2019, -1))
 
 all_seasons_data = []
 
@@ -214,17 +364,46 @@ for year in years:
     print(f"Scraping data for the {year} season...")
     
     # Open season standings with Selenium
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    driver.get(standings_url)
-    time.sleep(5)
+    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    try:
+        driver.get(standings_url)
+    except TimeoutException:
+        print("Page load timed out, but continuing...")
+        driver.execute_script("window.stop();")
+    except InvalidSessionIdException:
+        print("❌ Browser session lost. Exiting...")
+        exit(1)
+    except WebDriverException as e:
+        print(f"WebDriverException encountered: {e}")
+        print("Attempting to proceed...")
+    
+    # Wait for the page to load - give more time for Cloudflare challenges
+    # Check every 2 seconds, up to 60 seconds for each page
+    max_wait_time = 60
+    wait_interval = 2
+    elapsed_time = 0
+    
+    while elapsed_time < max_wait_time:
+        try:
+            wait = WebDriverWait(driver, 2)
+            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table.stats_table")))
+            time.sleep(2)  # Extra wait to ensure everything is rendered
+            break
+        except:
+            elapsed_time += wait_interval
+            time.sleep(wait_interval)
     
     soup = BeautifulSoup(driver.page_source, "html.parser")
-    driver.quit()
+    # driver.quit()
     
     # Get team URLs
     standings_table = soup.select_one('table.stats_table')
     if standings_table is None:
-        print("Could not find standings table.")
+        print(f"  Could not find standings table for {year} season. Skipping...")
+        # Try to get previous season link anyway
+        prev_link = soup.select_one("a.prev")
+        if prev_link:
+            standings_url = f"https://fbref.com{prev_link.get('href')}"
         continue
     
     links = [l.get("href") for l in standings_table.find_all('a', href=True)]
@@ -239,13 +418,43 @@ for year in years:
         team_name = team_url.split("/")[-1].replace("-Stats", "").replace("-", " ") #cleans the team name from the team URL
         
         # Scrape fixtures using Selenium
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-        driver.get(team_url)
+        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        try:
+            driver.get(team_url)
+        except TimeoutException:
+            print("Page load timed out, but continuing...")
+            driver.execute_script("window.stop();")
+        except InvalidSessionIdException:
+            print("❌ Browser session lost. Exiting...")
+            exit(1)
+        except WebDriverException as e:
+            print(f"WebDriverException encountered: {e}")
+            print("Attempting to proceed...")
+        
+        # Wait for team page to load
+        max_wait_time_team = 60
+        wait_interval_team = 2
+        elapsed_time_team = 0
+        
+        while elapsed_time_team < max_wait_time_team:
+            try:
+                wait_team = WebDriverWait(driver, 2)
+                wait_team.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table#matchlogs_for")))
+                break
+            except:
+                elapsed_time_team += wait_interval_team
+                time.sleep(wait_interval_team)
+        
         team_soup = BeautifulSoup(driver.page_source, "html.parser")
-        driver.quit()
+        # driver.quit()
         
         fixtures_table = team_soup.find("table", id="matchlogs_for")
         if not fixtures_table:
+            print(f"  No fixtures table found for {team_name}. Skipping.")
+            continue
+        
+        if fixtures_table.tbody is None:
+            print(f"  Fixtures table found but has no tbody for {team_name}. Skipping.")
             continue
         
         fixtures_data = []
@@ -274,13 +483,43 @@ for year in years:
             continue
         
         # Scrape shooting data
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-        driver.get(shooting_link)
+        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        try:
+            driver.get(shooting_link)
+        except TimeoutException:
+            print("Page load timed out, but continuing...")
+            driver.execute_script("window.stop();")
+        except InvalidSessionIdException:
+            print("❌ Browser session lost. Exiting...")
+            exit(1)
+        except WebDriverException as e:
+            print(f"WebDriverException encountered: {e}")
+            print("Attempting to proceed...")
+        
+        # Wait for shooting page to load
+        max_wait_time_shooting = 60
+        wait_interval_shooting = 2
+        elapsed_time_shooting = 0
+        
+        while elapsed_time_shooting < max_wait_time_shooting:
+            try:
+                wait_shooting = WebDriverWait(driver, 2)
+                wait_shooting.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table#matchlogs_for")))
+                break
+            except:
+                elapsed_time_shooting += wait_interval_shooting
+                time.sleep(wait_interval_shooting)
+        
         shooting_soup = BeautifulSoup(driver.page_source, "html.parser")
-        driver.quit()
+        # driver.quit()
         
         shooting_table = shooting_soup.find("table", id="matchlogs_for")
         if not shooting_table:
+            print(f"  No shooting table found for {team_name}. Skipping.")
+            continue
+        
+        if shooting_table.tbody is None:
+            print(f"  Shooting table found but has no tbody for {team_name}. Skipping.")
             continue
         
         shooting_data = []
@@ -325,6 +564,7 @@ team_df.columns = [c.lower() for c in team_df.columns]
 
 # Save the DataFrame to a CSV file
 team_df.to_csv("matches_data.csv", index=False)
+driver.quit()
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -1,0 +1,561 @@
+actual_x,prediction_x,date,team_x,opponent_x,result_x,new_team_x,actual_y,prediction_y,team_y,opponent_y,result_y,new_team_y
+1,2,2025-01-04,Arsenal,Brighton,D,Arsenal,1,0,Brighton and Hove Albion,Arsenal,D,Brighton
+2,2,2025-01-15,Arsenal,Tottenham,W,Arsenal,0,0,Tottenham Hotspur,Arsenal,L,Tottenham
+1,0,2025-01-18,Arsenal,Aston Villa,D,Arsenal,1,0,Aston Villa,Arsenal,D,Aston Villa
+2,2,2025-01-25,Arsenal,Wolves,W,Arsenal,0,0,Wolverhampton Wanderers,Arsenal,L,Wolves
+2,0,2025-02-02,Arsenal,Manchester City,W,Arsenal,0,2,Manchester City,Arsenal,L,Manchester City
+2,2,2025-02-15,Arsenal,Leicester City,W,Arsenal,0,0,Leicester City,Arsenal,L,Leicester City
+0,2,2025-02-22,Arsenal,West Ham,L,Arsenal,2,0,West Ham United,Arsenal,W,West Ham
+1,0,2025-03-09,Arsenal,Manchester Utd,D,Arsenal,1,0,Manchester United,Arsenal,D,Manchester Utd
+2,0,2025-03-16,Arsenal,Chelsea,W,Arsenal,0,2,Chelsea,Arsenal,L,Chelsea
+2,2,2025-04-01,Arsenal,Fulham,W,Arsenal,0,0,Fulham,Arsenal,L,Fulham
+1,2,2025-04-05,Arsenal,Everton,D,Arsenal,1,0,Everton,Arsenal,D,Everton
+1,2,2025-04-12,Arsenal,Brentford,D,Arsenal,1,0,Brentford,Arsenal,D,Brentford
+2,2,2025-04-20,Arsenal,Ipswich Town,W,Arsenal,0,0,Ipswich Town,Arsenal,L,Ipswich Town
+1,2,2025-04-23,Arsenal,Crystal Palace,D,Arsenal,1,0,Crystal Palace,Arsenal,D,Crystal Palace
+0,2,2025-05-03,Arsenal,Bournemouth,L,Arsenal,2,0,Bournemouth,Arsenal,W,Bournemouth
+1,0,2025-05-11,Arsenal,Liverpool,D,Arsenal,1,2,Liverpool,Arsenal,D,Liverpool
+2,2,2025-05-25,Arsenal,Southampton,W,Arsenal,0,0,Southampton,Arsenal,L,Southampton
+2,2,2025-08-17,Arsenal,Manchester Utd,W,Arsenal,0,0,Manchester United,Arsenal,L,Manchester Utd
+2,2,2025-08-23,Arsenal,Leeds United,W,Arsenal,0,0,Leeds United,Arsenal,L,Leeds United
+0,2,2025-08-31,Arsenal,Liverpool,L,Arsenal,2,0,Liverpool,Arsenal,W,Liverpool
+1,2,2025-09-21,Arsenal,Manchester City,D,Arsenal,1,0,Manchester City,Arsenal,D,Manchester City
+2,2,2025-10-04,Arsenal,West Ham,W,Arsenal,0,0,West Ham United,Arsenal,L,West Ham
+2,2,2025-10-18,Arsenal,Fulham,W,Arsenal,0,0,Fulham,Arsenal,L,Fulham
+2,2,2025-10-26,Arsenal,Crystal Palace,W,Arsenal,0,0,Crystal Palace,Arsenal,L,Crystal Palace
+2,2,2025-11-01,Arsenal,Burnley,W,Arsenal,0,0,Burnley,Arsenal,L,Burnley
+1,2,2025-11-08,Arsenal,Sunderland,D,Arsenal,1,0,Sunderland,Arsenal,D,Sunderland
+2,2,2025-11-23,Arsenal,Tottenham,W,Arsenal,0,0,Tottenham Hotspur,Arsenal,L,Tottenham
+1,0,2025-11-30,Arsenal,Chelsea,D,Arsenal,1,2,Chelsea,Arsenal,D,Chelsea
+2,2,2025-12-03,Arsenal,Brentford,W,Arsenal,0,2,Brentford,Arsenal,L,Brentford
+0,2,2025-12-06,Arsenal,Aston Villa,L,Arsenal,2,0,Aston Villa,Arsenal,W,Aston Villa
+2,2,2025-12-13,Arsenal,Wolves,W,Arsenal,0,0,Wolverhampton Wanderers,Arsenal,L,Wolves
+2,2,2025-01-04,Aston Villa,Leicester City,W,Aston Villa,0,0,Leicester City,Aston Villa,L,Leicester City
+2,2,2025-01-15,Aston Villa,Everton,W,Aston Villa,0,0,Everton,Aston Villa,L,Everton
+1,0,2025-01-18,Aston Villa,Arsenal,D,Aston Villa,1,0,Arsenal,Aston Villa,D,Arsenal
+1,2,2025-01-26,Aston Villa,West Ham,D,Aston Villa,1,0,West Ham United,Aston Villa,D,West Ham
+0,0,2025-02-01,Aston Villa,Wolves,L,Aston Villa,2,0,Wolverhampton Wanderers,Aston Villa,W,Wolves
+1,2,2025-02-15,Aston Villa,Ipswich Town,D,Aston Villa,1,0,Ipswich Town,Aston Villa,D,Ipswich Town
+1,0,2025-02-19,Aston Villa,Liverpool,D,Aston Villa,1,2,Liverpool,Aston Villa,D,Liverpool
+2,2,2025-02-22,Aston Villa,Chelsea,W,Aston Villa,0,0,Chelsea,Aston Villa,L,Chelsea
+0,0,2025-02-25,Aston Villa,Crystal Palace,L,Aston Villa,2,2,Crystal Palace,Aston Villa,W,Crystal Palace
+2,0,2025-03-08,Aston Villa,Brentford,W,Aston Villa,0,2,Brentford,Aston Villa,L,Brentford
+2,0,2025-04-02,Aston Villa,Brighton,W,Aston Villa,0,2,Brighton and Hove Albion,Aston Villa,L,Brighton
+2,2,2025-04-12,Aston Villa,Southampton,W,Aston Villa,0,0,Southampton,Aston Villa,L,Southampton
+0,2,2025-04-22,Aston Villa,Manchester City,L,Aston Villa,2,0,Manchester City,Aston Villa,W,Manchester City
+2,2,2025-05-03,Aston Villa,Fulham,W,Aston Villa,0,0,Fulham,Aston Villa,L,Fulham
+2,2,2025-05-10,Aston Villa,Bournemouth,W,Aston Villa,0,0,Bournemouth,Aston Villa,L,Bournemouth
+2,2,2025-05-16,Aston Villa,Tottenham,W,Aston Villa,0,0,Tottenham Hotspur,Aston Villa,L,Tottenham
+0,0,2025-05-25,Aston Villa,Manchester Utd,L,Aston Villa,2,0,Manchester United,Aston Villa,W,Manchester Utd
+0,0,2025-08-23,Aston Villa,Brentford,L,Aston Villa,2,2,Brentford,Aston Villa,W,Brentford
+0,2,2025-08-31,Aston Villa,Crystal Palace,L,Aston Villa,2,0,Crystal Palace,Aston Villa,W,Crystal Palace
+1,0,2025-09-13,Aston Villa,Everton,D,Aston Villa,1,2,Everton,Aston Villa,D,Everton
+1,2,2025-09-21,Aston Villa,Sunderland,D,Aston Villa,1,0,Sunderland,Aston Villa,D,Sunderland
+2,0,2025-09-28,Aston Villa,Fulham,W,Aston Villa,0,0,Fulham,Aston Villa,L,Fulham
+2,2,2025-10-05,Aston Villa,Burnley,W,Aston Villa,0,0,Burnley,Aston Villa,L,Burnley
+2,2,2025-10-19,Aston Villa,Tottenham,W,Aston Villa,0,0,Tottenham Hotspur,Aston Villa,L,Tottenham
+2,0,2025-10-26,Aston Villa,Manchester City,W,Aston Villa,0,2,Manchester City,Aston Villa,L,Manchester City
+0,0,2025-11-01,Aston Villa,Liverpool,L,Aston Villa,2,0,Liverpool,Aston Villa,W,Liverpool
+2,2,2025-11-09,Aston Villa,Bournemouth,W,Aston Villa,0,0,Bournemouth,Aston Villa,L,Bournemouth
+2,2,2025-11-23,Aston Villa,Leeds United,W,Aston Villa,0,0,Leeds United,Aston Villa,L,Leeds United
+2,2,2025-11-30,Aston Villa,Wolves,W,Aston Villa,0,0,Wolverhampton Wanderers,Aston Villa,L,Wolves
+2,2,2025-12-03,Aston Villa,Brighton,W,Aston Villa,0,0,Brighton and Hove Albion,Aston Villa,L,Brighton
+2,0,2025-12-06,Aston Villa,Arsenal,W,Aston Villa,0,2,Arsenal,Aston Villa,L,Arsenal
+2,2,2025-12-14,Aston Villa,West Ham,W,Aston Villa,0,0,West Ham United,Aston Villa,L,West Ham
+2,2,2025-01-04,Bournemouth,Everton,W,Bournemouth,0,0,Everton,Bournemouth,L,Everton
+1,2,2025-01-14,Bournemouth,Chelsea,D,Bournemouth,1,2,Chelsea,Bournemouth,D,Chelsea
+0,1,2025-02-01,Bournemouth,Liverpool,L,Bournemouth,2,2,Liverpool,Bournemouth,W,Liverpool
+2,2,2025-02-15,Bournemouth,Southampton,W,Bournemouth,0,0,Southampton,Bournemouth,L,Southampton
+0,2,2025-02-22,Bournemouth,Wolves,L,Bournemouth,2,0,Wolverhampton Wanderers,Bournemouth,W,Wolves
+0,0,2025-02-25,Bournemouth,Brighton,L,Bournemouth,2,2,Brighton and Hove Albion,Bournemouth,W,Brighton
+1,0,2025-03-09,Bournemouth,Tottenham,D,Bournemouth,1,2,Tottenham Hotspur,Bournemouth,D,Tottenham
+0,2,2025-03-15,Bournemouth,Brentford,L,Bournemouth,2,2,Brentford,Bournemouth,W,Brentford
+0,2,2025-04-02,Bournemouth,Ipswich Town,L,Bournemouth,2,0,Ipswich Town,Bournemouth,W,Ipswich Town
+1,2,2025-04-05,Bournemouth,West Ham,D,Bournemouth,1,0,West Ham United,Bournemouth,D,West Ham
+2,2,2025-04-14,Bournemouth,Fulham,W,Bournemouth,0,0,Fulham,Bournemouth,L,Fulham
+1,2,2025-04-19,Bournemouth,Crystal Palace,D,Bournemouth,1,0,Crystal Palace,Bournemouth,D,Crystal Palace
+1,2,2025-04-27,Bournemouth,Manchester Utd,D,Bournemouth,1,0,Manchester United,Bournemouth,D,Manchester Utd
+2,0,2025-05-03,Bournemouth,Arsenal,W,Bournemouth,0,2,Arsenal,Bournemouth,L,Arsenal
+0,0,2025-05-10,Bournemouth,Aston Villa,L,Bournemouth,2,2,Aston Villa,Bournemouth,W,Aston Villa
+0,0,2025-05-20,Bournemouth,Manchester City,L,Bournemouth,2,2,Manchester City,Bournemouth,W,Manchester City
+2,0,2025-05-25,Bournemouth,Leicester City,W,Bournemouth,0,0,Leicester City,Bournemouth,L,Leicester City
+0,0,2025-08-15,Bournemouth,Liverpool,L,Bournemouth,2,2,Liverpool,Bournemouth,W,Liverpool
+2,2,2025-08-23,Bournemouth,Wolves,W,Bournemouth,0,0,Wolverhampton Wanderers,Bournemouth,L,Wolves
+2,2,2025-08-30,Bournemouth,Tottenham,W,Bournemouth,0,0,Tottenham Hotspur,Bournemouth,L,Tottenham
+2,2,2025-09-13,Bournemouth,Brighton,W,Bournemouth,0,0,Brighton and Hove Albion,Bournemouth,L,Brighton
+1,2,2025-09-27,Bournemouth,Leeds United,D,Bournemouth,1,0,Leeds United,Bournemouth,D,Leeds United
+2,2,2025-10-03,Bournemouth,Fulham,W,Bournemouth,0,0,Fulham,Bournemouth,L,Fulham
+1,0,2025-10-18,Bournemouth,Crystal Palace,D,Bournemouth,1,2,Crystal Palace,Bournemouth,D,Crystal Palace
+0,0,2025-11-02,Bournemouth,Manchester City,L,Bournemouth,2,2,Manchester City,Bournemouth,W,Manchester City
+0,0,2025-11-09,Bournemouth,Aston Villa,L,Bournemouth,2,2,Aston Villa,Bournemouth,W,Aston Villa
+1,0,2025-11-22,Bournemouth,West Ham,D,Bournemouth,1,2,West Ham United,Bournemouth,D,West Ham
+0,0,2025-11-29,Bournemouth,Sunderland,L,Bournemouth,2,0,Sunderland,Bournemouth,W,Sunderland
+0,2,2025-12-02,Bournemouth,Everton,L,Bournemouth,2,0,Everton,Bournemouth,W,Everton
+1,2,2025-12-06,Bournemouth,Chelsea,D,Bournemouth,1,2,Chelsea,Bournemouth,D,Chelsea
+1,0,2025-12-15,Bournemouth,Manchester Utd,D,Bournemouth,1,2,Manchester United,Bournemouth,D,Manchester Utd
+2,0,2025-01-04,Brentford,Southampton,W,Brentford,0,0,Southampton,Brentford,L,Southampton
+1,0,2025-01-14,Brentford,Manchester City,D,Brentford,1,2,Manchester City,Brentford,D,Manchester City
+0,0,2025-01-18,Brentford,Liverpool,L,Brentford,2,2,Liverpool,Brentford,W,Liverpool
+2,2,2025-01-26,Brentford,Crystal Palace,W,Brentford,0,2,Crystal Palace,Brentford,L,Crystal Palace
+0,2,2025-02-02,Brentford,Tottenham,L,Brentford,2,0,Tottenham Hotspur,Brentford,W,Tottenham
+2,2,2025-02-15,Brentford,West Ham,W,Brentford,0,0,West Ham United,Brentford,L,West Ham
+2,2,2025-02-21,Brentford,Leicester City,W,Brentford,0,0,Leicester City,Brentford,L,Leicester City
+1,2,2025-02-26,Brentford,Everton,D,Brentford,1,0,Everton,Brentford,D,Everton
+0,2,2025-03-08,Brentford,Aston Villa,L,Brentford,2,0,Aston Villa,Brentford,W,Aston Villa
+2,2,2025-03-15,Brentford,Bournemouth,W,Brentford,0,2,Bournemouth,Brentford,L,Bournemouth
+1,0,2025-04-06,Brentford,Chelsea,D,Brentford,1,0,Chelsea,Brentford,D,Chelsea
+1,0,2025-04-12,Brentford,Arsenal,D,Brentford,1,2,Arsenal,Brentford,D,Arsenal
+2,0,2025-04-19,Brentford,Brighton,W,Brentford,0,2,Brighton and Hove Albion,Brentford,L,Brighton
+2,0,2025-05-04,Brentford,Manchester Utd,W,Brentford,0,2,Manchester United,Brentford,L,Manchester Utd
+2,2,2025-05-10,Brentford,Ipswich Town,W,Brentford,0,0,Ipswich Town,Brentford,L,Ipswich Town
+0,2,2025-05-18,Brentford,Fulham,L,Brentford,2,0,Fulham,Brentford,W,Fulham
+1,2,2025-05-25,Brentford,Wolves,D,Brentford,1,0,Wolverhampton Wanderers,Brentford,D,Wolves
+2,2,2025-08-23,Brentford,Aston Villa,W,Brentford,0,0,Aston Villa,Brentford,L,Aston Villa
+1,0,2025-09-13,Brentford,Chelsea,D,Brentford,1,2,Chelsea,Brentford,D,Chelsea
+0,0,2025-09-20,Brentford,Fulham,L,Brentford,2,0,Fulham,Brentford,W,Fulham
+2,0,2025-09-27,Brentford,Manchester Utd,W,Brentford,0,2,Manchester United,Brentford,L,Manchester Utd
+0,2,2025-10-05,Brentford,Manchester City,L,Brentford,2,0,Manchester City,Brentford,W,Manchester City
+2,0,2025-10-20,Brentford,West Ham,W,Brentford,0,2,West Ham United,Brentford,L,West Ham
+2,2,2025-10-25,Brentford,Liverpool,W,Brentford,0,2,Liverpool,Brentford,L,Liverpool
+0,2,2025-11-01,Brentford,Crystal Palace,L,Brentford,2,2,Crystal Palace,Brentford,W,Crystal Palace
+0,2,2025-11-22,Brentford,Brighton,L,Brentford,2,1,Brighton and Hove Albion,Brentford,W,Brighton
+2,2,2025-11-29,Brentford,Burnley,W,Brentford,0,0,Burnley,Brentford,L,Burnley
+0,2,2025-12-03,Brentford,Arsenal,L,Brentford,2,2,Arsenal,Brentford,W,Arsenal
+0,2,2025-12-06,Brentford,Tottenham,L,Brentford,2,0,Tottenham Hotspur,Brentford,W,Tottenham
+1,0,2025-12-14,Brentford,Leeds United,D,Brentford,1,0,Leeds United,Brentford,D,Leeds United
+1,0,2025-01-04,Brighton and Hove Albion,Arsenal,D,Brighton,1,2,Arsenal,Brighton,D,Arsenal
+2,2,2025-01-16,Brighton and Hove Albion,Ipswich Town,W,Brighton,0,0,Ipswich Town,Brighton,L,Ipswich Town
+2,0,2025-01-19,Brighton and Hove Albion,Manchester Utd,W,Brighton,0,2,Manchester United,Brighton,L,Manchester Utd
+0,2,2025-01-25,Brighton and Hove Albion,Everton,L,Brighton,2,0,Everton,Brighton,W,Everton
+2,0,2025-02-14,Brighton and Hove Albion,Chelsea,W,Brighton,0,2,Chelsea,Brighton,L,Chelsea
+2,2,2025-02-22,Brighton and Hove Albion,Southampton,W,Brighton,0,0,Southampton,Brighton,L,Southampton
+2,2,2025-02-25,Brighton and Hove Albion,Bournemouth,W,Brighton,0,0,Bournemouth,Brighton,L,Bournemouth
+2,2,2025-03-08,Brighton and Hove Albion,Fulham,W,Brighton,0,0,Fulham,Brighton,L,Fulham
+1,2,2025-03-15,Brighton and Hove Albion,Manchester City,D,Brighton,1,0,Manchester City,Brighton,D,Manchester City
+0,2,2025-04-02,Brighton and Hove Albion,Aston Villa,L,Brighton,2,0,Aston Villa,Brighton,W,Aston Villa
+0,0,2025-04-05,Brighton and Hove Albion,Crystal Palace,L,Brighton,2,2,Crystal Palace,Brighton,W,Crystal Palace
+1,2,2025-04-12,Brighton and Hove Albion,Leicester City,D,Brighton,1,0,Leicester City,Brighton,D,Leicester City
+0,2,2025-04-19,Brighton and Hove Albion,Brentford,L,Brighton,2,0,Brentford,Brighton,W,Brentford
+2,2,2025-04-26,Brighton and Hove Albion,West Ham,W,Brighton,0,0,West Ham United,Brighton,L,West Ham
+2,2,2025-05-10,Brighton and Hove Albion,Wolves,W,Brighton,0,0,Wolverhampton Wanderers,Brighton,L,Wolves
+2,0,2025-05-19,Brighton and Hove Albion,Liverpool,W,Brighton,0,1,Liverpool,Brighton,L,Liverpool
+2,2,2025-05-25,Brighton and Hove Albion,Tottenham,W,Brighton,0,0,Tottenham Hotspur,Brighton,L,Tottenham
+1,2,2025-08-16,Brighton and Hove Albion,Fulham,D,Brighton,1,0,Fulham,Brighton,D,Fulham
+0,2,2025-08-24,Brighton and Hove Albion,Everton,L,Brighton,2,0,Everton,Brighton,W,Everton
+2,0,2025-08-31,Brighton and Hove Albion,Manchester City,W,Brighton,0,2,Manchester City,Brighton,L,Manchester City
+0,0,2025-09-13,Brighton and Hove Albion,Bournemouth,L,Brighton,2,2,Bournemouth,Brighton,W,Bournemouth
+1,2,2025-09-20,Brighton and Hove Albion,Tottenham,D,Brighton,1,2,Tottenham Hotspur,Brighton,D,Tottenham
+2,0,2025-09-27,Brighton and Hove Albion,Chelsea,W,Brighton,0,2,Chelsea,Brighton,L,Chelsea
+1,0,2025-10-05,Brighton and Hove Albion,Wolves,D,Brighton,1,2,Wolverhampton Wanderers,Brighton,D,Wolves
+0,0,2025-10-25,Brighton and Hove Albion,Manchester Utd,L,Brighton,2,2,Manchester United,Brighton,W,Manchester Utd
+2,2,2025-11-01,Brighton and Hove Albion,Leeds United,W,Brighton,0,0,Leeds United,Brighton,L,Leeds United
+1,1,2025-11-09,Brighton and Hove Albion,Crystal Palace,D,Brighton,1,2,Crystal Palace,Brighton,D,Crystal Palace
+2,1,2025-11-22,Brighton and Hove Albion,Brentford,W,Brighton,0,2,Brentford,Brighton,L,Brentford
+0,0,2025-12-03,Brighton and Hove Albion,Aston Villa,L,Brighton,2,2,Aston Villa,Brighton,W,Aston Villa
+1,2,2025-12-07,Brighton and Hove Albion,West Ham,D,Brighton,1,0,West Ham United,Brighton,D,West Ham
+0,0,2025-12-13,Brighton and Hove Albion,Liverpool,L,Brighton,2,2,Liverpool,Brighton,W,Liverpool
+0,2,2025-08-16,Burnley,Tottenham,L,Burnley,2,0,Tottenham Hotspur,Burnley,W,Tottenham
+0,0,2025-08-30,Burnley,Manchester Utd,L,Burnley,2,2,Manchester United,Burnley,W,Manchester Utd
+0,1,2025-09-14,Burnley,Liverpool,L,Burnley,2,1,Liverpool,Burnley,W,Liverpool
+0,0,2025-09-27,Burnley,Manchester City,L,Burnley,2,2,Manchester City,Burnley,W,Manchester City
+0,0,2025-10-05,Burnley,Aston Villa,L,Burnley,2,2,Aston Villa,Burnley,W,Aston Villa
+2,0,2025-10-18,Burnley,Leeds United,W,Burnley,0,2,Leeds United,Burnley,L,Leeds United
+2,0,2025-10-26,Burnley,Wolves,W,Burnley,0,2,Wolverhampton Wanderers,Burnley,L,Wolves
+0,0,2025-11-01,Burnley,Arsenal,L,Burnley,2,2,Arsenal,Burnley,W,Arsenal
+0,2,2025-11-08,Burnley,West Ham,L,Burnley,2,0,West Ham United,Burnley,W,West Ham
+0,0,2025-11-22,Burnley,Chelsea,L,Burnley,2,2,Chelsea,Burnley,W,Chelsea
+0,0,2025-11-29,Burnley,Brentford,L,Burnley,2,2,Brentford,Burnley,W,Brentford
+0,0,2025-12-03,Burnley,Crystal Palace,L,Burnley,2,2,Crystal Palace,Burnley,W,Crystal Palace
+0,0,2025-12-13,Burnley,Fulham,L,Burnley,2,0,Fulham,Burnley,W,Fulham
+1,2,2025-01-04,Chelsea,Crystal Palace,D,Chelsea,1,2,Crystal Palace,Chelsea,D,Crystal Palace
+1,2,2025-01-14,Chelsea,Bournemouth,D,Chelsea,1,2,Bournemouth,Chelsea,D,Bournemouth
+2,2,2025-01-20,Chelsea,Wolves,W,Chelsea,0,0,Wolverhampton Wanderers,Chelsea,L,Wolves
+0,0,2025-01-25,Chelsea,Manchester City,L,Chelsea,2,2,Manchester City,Chelsea,W,Manchester City
+2,2,2025-02-03,Chelsea,West Ham,W,Chelsea,0,0,West Ham United,Chelsea,L,West Ham
+0,2,2025-02-14,Chelsea,Brighton,L,Chelsea,2,0,Brighton and Hove Albion,Chelsea,W,Brighton
+0,0,2025-02-22,Chelsea,Aston Villa,L,Chelsea,2,2,Aston Villa,Chelsea,W,Aston Villa
+2,2,2025-02-25,Chelsea,Southampton,W,Chelsea,0,0,Southampton,Chelsea,L,Southampton
+2,2,2025-03-09,Chelsea,Leicester City,W,Chelsea,0,0,Leicester City,Chelsea,L,Leicester City
+0,2,2025-03-16,Chelsea,Arsenal,L,Chelsea,2,0,Arsenal,Chelsea,W,Arsenal
+2,2,2025-04-03,Chelsea,Tottenham,W,Chelsea,0,0,Tottenham Hotspur,Chelsea,L,Tottenham
+1,0,2025-04-06,Chelsea,Brentford,D,Chelsea,1,0,Brentford,Chelsea,D,Brentford
+1,2,2025-04-13,Chelsea,Ipswich Town,D,Chelsea,1,0,Ipswich Town,Chelsea,D,Ipswich Town
+2,2,2025-04-20,Chelsea,Fulham,W,Chelsea,0,0,Fulham,Chelsea,L,Fulham
+2,2,2025-04-26,Chelsea,Everton,W,Chelsea,0,0,Everton,Chelsea,L,Everton
+2,0,2025-05-04,Chelsea,Liverpool,W,Chelsea,0,1,Liverpool,Chelsea,L,Liverpool
+2,0,2025-05-16,Chelsea,Manchester Utd,W,Chelsea,0,2,Manchester United,Chelsea,L,Manchester Utd
+1,0,2025-08-17,Chelsea,Crystal Palace,D,Chelsea,1,2,Crystal Palace,Chelsea,D,Crystal Palace
+2,2,2025-08-22,Chelsea,West Ham,W,Chelsea,0,1,West Ham United,Chelsea,L,West Ham
+2,2,2025-08-30,Chelsea,Fulham,W,Chelsea,0,0,Fulham,Chelsea,L,Fulham
+1,2,2025-09-13,Chelsea,Brentford,D,Chelsea,1,0,Brentford,Chelsea,D,Brentford
+0,2,2025-09-20,Chelsea,Manchester Utd,L,Chelsea,2,0,Manchester United,Chelsea,W,Manchester Utd
+0,2,2025-09-27,Chelsea,Brighton,L,Chelsea,2,0,Brighton and Hove Albion,Chelsea,W,Brighton
+2,0,2025-10-04,Chelsea,Liverpool,W,Chelsea,0,2,Liverpool,Chelsea,L,Liverpool
+0,2,2025-10-25,Chelsea,Sunderland,L,Chelsea,2,0,Sunderland,Chelsea,W,Sunderland
+2,2,2025-11-01,Chelsea,Tottenham,W,Chelsea,0,0,Tottenham Hotspur,Chelsea,L,Tottenham
+2,2,2025-11-08,Chelsea,Wolves,W,Chelsea,0,0,Wolverhampton Wanderers,Chelsea,L,Wolves
+2,2,2025-11-22,Chelsea,Burnley,W,Chelsea,0,0,Burnley,Chelsea,L,Burnley
+1,2,2025-11-30,Chelsea,Arsenal,D,Chelsea,1,0,Arsenal,Chelsea,D,Arsenal
+0,2,2025-12-03,Chelsea,Leeds United,L,Chelsea,2,0,Leeds United,Chelsea,W,Leeds United
+1,2,2025-12-06,Chelsea,Bournemouth,D,Chelsea,1,2,Bournemouth,Chelsea,D,Bournemouth
+2,2,2025-12-13,Chelsea,Everton,W,Chelsea,0,0,Everton,Chelsea,L,Everton
+1,2,2025-01-04,Crystal Palace,Chelsea,D,Crystal Palace,1,2,Chelsea,Crystal Palace,D,Chelsea
+2,2,2025-01-15,Crystal Palace,Leicester City,W,Crystal Palace,0,0,Leicester City,Crystal Palace,L,Leicester City
+2,2,2025-01-18,Crystal Palace,West Ham,W,Crystal Palace,0,0,West Ham United,Crystal Palace,L,West Ham
+0,2,2025-01-26,Crystal Palace,Brentford,L,Crystal Palace,2,2,Brentford,Crystal Palace,W,Brentford
+2,2,2025-02-02,Crystal Palace,Manchester Utd,W,Crystal Palace,0,2,Manchester United,Crystal Palace,L,Manchester Utd
+0,2,2025-02-15,Crystal Palace,Everton,L,Crystal Palace,2,0,Everton,Crystal Palace,W,Everton
+2,0,2025-02-22,Crystal Palace,Fulham,W,Crystal Palace,0,2,Fulham,Crystal Palace,L,Fulham
+2,2,2025-02-25,Crystal Palace,Aston Villa,W,Crystal Palace,0,0,Aston Villa,Crystal Palace,L,Aston Villa
+2,2,2025-03-08,Crystal Palace,Ipswich Town,W,Crystal Palace,0,0,Ipswich Town,Crystal Palace,L,Ipswich Town
+1,2,2025-04-02,Crystal Palace,Southampton,D,Crystal Palace,1,0,Southampton,Crystal Palace,D,Southampton
+2,2,2025-04-05,Crystal Palace,Brighton,W,Crystal Palace,0,0,Brighton and Hove Albion,Crystal Palace,L,Brighton
+0,0,2025-04-12,Crystal Palace,Manchester City,L,Crystal Palace,2,2,Manchester City,Crystal Palace,W,Manchester City
+1,0,2025-04-19,Crystal Palace,Bournemouth,D,Crystal Palace,1,2,Bournemouth,Crystal Palace,D,Bournemouth
+1,0,2025-04-23,Crystal Palace,Arsenal,D,Crystal Palace,1,2,Arsenal,Crystal Palace,D,Arsenal
+2,2,2025-05-11,Crystal Palace,Tottenham,W,Crystal Palace,0,0,Tottenham Hotspur,Crystal Palace,L,Tottenham
+2,2,2025-05-20,Crystal Palace,Wolves,W,Crystal Palace,0,0,Wolverhampton Wanderers,Crystal Palace,L,Wolves
+1,2,2025-05-25,Crystal Palace,Liverpool,D,Crystal Palace,1,0,Liverpool,Crystal Palace,D,Liverpool
+1,2,2025-08-17,Crystal Palace,Chelsea,D,Crystal Palace,1,0,Chelsea,Crystal Palace,D,Chelsea
+2,0,2025-08-31,Crystal Palace,Aston Villa,W,Crystal Palace,0,2,Aston Villa,Crystal Palace,L,Aston Villa
+1,2,2025-09-13,Crystal Palace,Sunderland,D,Crystal Palace,1,0,Sunderland,Crystal Palace,D,Sunderland
+2,0,2025-09-20,Crystal Palace,West Ham,W,Crystal Palace,0,2,West Ham United,Crystal Palace,L,West Ham
+2,0,2025-09-27,Crystal Palace,Liverpool,W,Crystal Palace,0,0,Liverpool,Crystal Palace,L,Liverpool
+0,2,2025-10-05,Crystal Palace,Everton,L,Crystal Palace,2,0,Everton,Crystal Palace,W,Everton
+1,2,2025-10-18,Crystal Palace,Bournemouth,D,Crystal Palace,1,0,Bournemouth,Crystal Palace,D,Bournemouth
+0,0,2025-10-26,Crystal Palace,Arsenal,L,Crystal Palace,2,2,Arsenal,Crystal Palace,W,Arsenal
+2,2,2025-11-01,Crystal Palace,Brentford,W,Crystal Palace,0,2,Brentford,Crystal Palace,L,Brentford
+1,2,2025-11-09,Crystal Palace,Brighton,D,Crystal Palace,1,1,Brighton and Hove Albion,Crystal Palace,D,Brighton
+2,2,2025-11-22,Crystal Palace,Wolves,W,Crystal Palace,0,0,Wolverhampton Wanderers,Crystal Palace,L,Wolves
+0,0,2025-11-30,Crystal Palace,Manchester Utd,L,Crystal Palace,2,2,Manchester United,Crystal Palace,W,Manchester Utd
+2,2,2025-12-03,Crystal Palace,Burnley,W,Crystal Palace,0,0,Burnley,Crystal Palace,L,Burnley
+2,0,2025-12-07,Crystal Palace,Fulham,W,Crystal Palace,0,2,Fulham,Crystal Palace,L,Fulham
+0,0,2025-12-14,Crystal Palace,Manchester City,L,Crystal Palace,2,1,Manchester City,Crystal Palace,W,Manchester City
+0,0,2025-01-04,Everton,Bournemouth,L,Everton,2,2,Bournemouth,Everton,W,Bournemouth
+0,0,2025-01-15,Everton,Aston Villa,L,Everton,2,2,Aston Villa,Everton,W,Aston Villa
+2,2,2025-01-19,Everton,Tottenham,W,Everton,0,2,Tottenham Hotspur,Everton,L,Tottenham
+2,0,2025-01-25,Everton,Brighton,W,Everton,0,2,Brighton and Hove Albion,Everton,L,Brighton
+2,0,2025-02-01,Everton,Leicester City,W,Everton,0,2,Leicester City,Everton,L,Leicester City
+1,0,2025-02-12,Everton,Liverpool,D,Everton,1,2,Liverpool,Everton,D,Liverpool
+2,0,2025-02-15,Everton,Crystal Palace,W,Everton,0,2,Crystal Palace,Everton,L,Crystal Palace
+1,2,2025-02-22,Everton,Manchester Utd,D,Everton,1,0,Manchester United,Everton,D,Manchester Utd
+1,0,2025-02-26,Everton,Brentford,D,Everton,1,2,Brentford,Everton,D,Brentford
+1,0,2025-03-08,Everton,Wolves,D,Everton,1,2,Wolverhampton Wanderers,Everton,D,Wolves
+1,2,2025-03-15,Everton,West Ham,D,Everton,1,0,West Ham United,Everton,D,West Ham
+0,0,2025-04-02,Everton,Liverpool,L,Everton,2,2,Liverpool,Everton,W,Liverpool
+1,0,2025-04-05,Everton,Arsenal,D,Everton,1,2,Arsenal,Everton,D,Arsenal
+0,0,2025-04-19,Everton,Manchester City,L,Everton,2,2,Manchester City,Everton,W,Manchester City
+0,0,2025-04-26,Everton,Chelsea,L,Everton,2,2,Chelsea,Everton,W,Chelsea
+1,2,2025-05-03,Everton,Ipswich Town,D,Everton,1,0,Ipswich Town,Everton,D,Ipswich Town
+2,0,2025-05-10,Everton,Fulham,W,Everton,0,2,Fulham,Everton,L,Fulham
+2,2,2025-05-18,Everton,Southampton,W,Everton,0,0,Southampton,Everton,L,Southampton
+0,2,2025-08-18,Everton,Leeds United,L,Everton,2,0,Leeds United,Everton,W,Leeds United
+2,0,2025-08-24,Everton,Brighton,W,Everton,0,2,Brighton and Hove Albion,Everton,L,Brighton
+2,2,2025-08-30,Everton,Wolves,W,Everton,0,0,Wolverhampton Wanderers,Everton,L,Wolves
+1,2,2025-09-13,Everton,Aston Villa,D,Everton,1,0,Aston Villa,Everton,D,Aston Villa
+0,2,2025-09-20,Everton,Liverpool,L,Everton,2,2,Liverpool,Everton,W,Liverpool
+1,2,2025-09-29,Everton,West Ham,D,Everton,1,0,West Ham United,Everton,D,West Ham
+2,0,2025-10-05,Everton,Crystal Palace,W,Everton,0,2,Crystal Palace,Everton,L,Crystal Palace
+0,0,2025-10-18,Everton,Manchester City,L,Everton,2,2,Manchester City,Everton,W,Manchester City
+0,2,2025-10-26,Everton,Tottenham,L,Everton,2,0,Tottenham Hotspur,Everton,W,Tottenham
+1,0,2025-11-03,Everton,Sunderland,D,Everton,1,0,Sunderland,Everton,D,Sunderland
+2,0,2025-11-08,Everton,Fulham,W,Everton,0,2,Fulham,Everton,L,Fulham
+2,0,2025-11-24,Everton,Manchester Utd,W,Everton,0,2,Manchester United,Everton,L,Manchester Utd
+2,0,2025-12-02,Everton,Bournemouth,W,Everton,0,2,Bournemouth,Everton,L,Bournemouth
+0,0,2025-12-13,Everton,Chelsea,L,Everton,2,2,Chelsea,Everton,W,Chelsea
+1,2,2025-01-05,Fulham,Ipswich Town,D,Fulham,1,0,Ipswich Town,Fulham,D,Ipswich Town
+0,2,2025-01-14,Fulham,West Ham,L,Fulham,2,2,West Ham United,Fulham,W,West Ham
+2,2,2025-01-18,Fulham,Leicester City,W,Fulham,0,0,Leicester City,Fulham,L,Leicester City
+0,2,2025-01-26,Fulham,Manchester Utd,L,Fulham,2,0,Manchester United,Fulham,W,Manchester Utd
+0,2,2025-02-22,Fulham,Crystal Palace,L,Fulham,2,0,Crystal Palace,Fulham,W,Crystal Palace
+2,2,2025-02-25,Fulham,Wolves,W,Fulham,0,0,Wolverhampton Wanderers,Fulham,L,Wolves
+0,0,2025-03-08,Fulham,Brighton,L,Fulham,2,2,Brighton and Hove Albion,Fulham,W,Brighton
+2,0,2025-03-16,Fulham,Tottenham,W,Fulham,0,2,Tottenham Hotspur,Fulham,L,Tottenham
+0,0,2025-04-01,Fulham,Arsenal,L,Fulham,2,2,Arsenal,Fulham,W,Arsenal
+2,0,2025-04-06,Fulham,Liverpool,W,Fulham,0,2,Liverpool,Fulham,L,Liverpool
+0,0,2025-04-14,Fulham,Bournemouth,L,Fulham,2,2,Bournemouth,Fulham,W,Bournemouth
+0,0,2025-04-20,Fulham,Chelsea,L,Fulham,2,2,Chelsea,Fulham,W,Chelsea
+2,0,2025-04-26,Fulham,Southampton,W,Fulham,0,0,Southampton,Fulham,L,Southampton
+0,0,2025-05-03,Fulham,Aston Villa,L,Fulham,2,2,Aston Villa,Fulham,W,Aston Villa
+0,2,2025-05-10,Fulham,Everton,L,Fulham,2,0,Everton,Fulham,W,Everton
+2,0,2025-05-18,Fulham,Brentford,W,Fulham,0,2,Brentford,Fulham,L,Brentford
+0,0,2025-05-25,Fulham,Manchester City,L,Fulham,2,2,Manchester City,Fulham,W,Manchester City
+1,0,2025-08-16,Fulham,Brighton,D,Fulham,1,2,Brighton and Hove Albion,Fulham,D,Brighton
+1,0,2025-08-24,Fulham,Manchester Utd,D,Fulham,1,2,Manchester United,Fulham,D,Manchester Utd
+0,0,2025-08-30,Fulham,Chelsea,L,Fulham,2,2,Chelsea,Fulham,W,Chelsea
+2,2,2025-09-13,Fulham,Leeds United,W,Fulham,0,0,Leeds United,Fulham,L,Leeds United
+2,0,2025-09-20,Fulham,Brentford,W,Fulham,0,0,Brentford,Fulham,L,Brentford
+0,0,2025-09-28,Fulham,Aston Villa,L,Fulham,2,0,Aston Villa,Fulham,W,Aston Villa
+0,0,2025-10-03,Fulham,Bournemouth,L,Fulham,2,2,Bournemouth,Fulham,W,Bournemouth
+0,0,2025-10-18,Fulham,Arsenal,L,Fulham,2,2,Arsenal,Fulham,W,Arsenal
+2,0,2025-11-01,Fulham,Wolves,W,Fulham,0,2,Wolverhampton Wanderers,Fulham,L,Wolves
+0,2,2025-11-08,Fulham,Everton,L,Fulham,2,0,Everton,Fulham,W,Everton
+2,2,2025-11-22,Fulham,Sunderland,W,Fulham,0,0,Sunderland,Fulham,L,Sunderland
+2,2,2025-11-29,Fulham,Tottenham,W,Fulham,0,0,Tottenham Hotspur,Fulham,L,Tottenham
+0,0,2025-12-02,Fulham,Manchester City,L,Fulham,2,2,Manchester City,Fulham,W,Manchester City
+0,2,2025-12-07,Fulham,Crystal Palace,L,Fulham,2,0,Crystal Palace,Fulham,W,Crystal Palace
+2,0,2025-12-13,Fulham,Burnley,W,Fulham,0,0,Burnley,Fulham,L,Burnley
+1,0,2025-01-05,Ipswich Town,Fulham,D,Ipswich Town,1,2,Fulham,Ipswich Town,D,Fulham
+0,0,2025-01-16,Ipswich Town,Brighton,L,Ipswich Town,2,2,Brighton and Hove Albion,Ipswich Town,W,Brighton
+0,0,2025-01-19,Ipswich Town,Manchester City,L,Ipswich Town,2,2,Manchester City,Ipswich Town,W,Manchester City
+0,0,2025-01-25,Ipswich Town,Liverpool,L,Ipswich Town,2,2,Liverpool,Ipswich Town,W,Liverpool
+0,2,2025-02-01,Ipswich Town,Southampton,L,Ipswich Town,2,0,Southampton,Ipswich Town,W,Southampton
+1,0,2025-02-15,Ipswich Town,Aston Villa,D,Ipswich Town,1,2,Aston Villa,Ipswich Town,D,Aston Villa
+0,0,2025-02-22,Ipswich Town,Tottenham,L,Ipswich Town,2,2,Tottenham Hotspur,Ipswich Town,W,Tottenham
+0,0,2025-02-26,Ipswich Town,Manchester Utd,L,Ipswich Town,2,2,Manchester United,Ipswich Town,W,Manchester Utd
+0,0,2025-03-08,Ipswich Town,Crystal Palace,L,Ipswich Town,2,2,Crystal Palace,Ipswich Town,W,Crystal Palace
+2,0,2025-04-02,Ipswich Town,Bournemouth,W,Ipswich Town,0,2,Bournemouth,Ipswich Town,L,Bournemouth
+0,2,2025-04-05,Ipswich Town,Wolves,L,Ipswich Town,2,0,Wolverhampton Wanderers,Ipswich Town,W,Wolves
+1,0,2025-04-13,Ipswich Town,Chelsea,D,Ipswich Town,1,2,Chelsea,Ipswich Town,D,Chelsea
+0,0,2025-04-20,Ipswich Town,Arsenal,L,Ipswich Town,2,2,Arsenal,Ipswich Town,W,Arsenal
+1,0,2025-05-03,Ipswich Town,Everton,D,Ipswich Town,1,2,Everton,Ipswich Town,D,Everton
+0,0,2025-05-10,Ipswich Town,Brentford,L,Ipswich Town,2,2,Brentford,Ipswich Town,W,Brentford
+0,0,2025-05-18,Ipswich Town,Leicester City,L,Ipswich Town,2,2,Leicester City,Ipswich Town,W,Leicester City
+0,2,2025-05-25,Ipswich Town,West Ham,L,Ipswich Town,2,0,West Ham United,Ipswich Town,W,West Ham
+2,0,2025-08-18,Leeds United,Everton,W,Leeds United,0,2,Everton,Leeds United,L,Everton
+0,0,2025-08-23,Leeds United,Arsenal,L,Leeds United,2,2,Arsenal,Leeds United,W,Arsenal
+0,0,2025-09-13,Leeds United,Fulham,L,Leeds United,2,2,Fulham,Leeds United,W,Fulham
+2,0,2025-09-20,Leeds United,Wolves,W,Leeds United,0,0,Wolverhampton Wanderers,Leeds United,L,Wolves
+1,0,2025-09-27,Leeds United,Bournemouth,D,Leeds United,1,2,Bournemouth,Leeds United,D,Bournemouth
+0,2,2025-10-04,Leeds United,Tottenham,L,Leeds United,2,0,Tottenham Hotspur,Leeds United,W,Tottenham
+0,2,2025-10-18,Leeds United,Burnley,L,Leeds United,2,0,Burnley,Leeds United,W,Burnley
+2,2,2025-10-24,Leeds United,West Ham,W,Leeds United,0,0,West Ham United,Leeds United,L,West Ham
+0,0,2025-11-01,Leeds United,Brighton,L,Leeds United,2,2,Brighton and Hove Albion,Leeds United,W,Brighton
+0,0,2025-11-23,Leeds United,Aston Villa,L,Leeds United,2,2,Aston Villa,Leeds United,W,Aston Villa
+0,0,2025-11-29,Leeds United,Manchester City,L,Leeds United,2,2,Manchester City,Leeds United,W,Manchester City
+2,0,2025-12-03,Leeds United,Chelsea,W,Leeds United,0,2,Chelsea,Leeds United,L,Chelsea
+1,0,2025-12-06,Leeds United,Liverpool,D,Leeds United,1,2,Liverpool,Leeds United,D,Liverpool
+1,0,2025-12-14,Leeds United,Brentford,D,Leeds United,1,0,Brentford,Leeds United,D,Brentford
+0,0,2025-01-04,Leicester City,Aston Villa,L,Leicester City,2,2,Aston Villa,Leicester City,W,Aston Villa
+0,0,2025-01-15,Leicester City,Crystal Palace,L,Leicester City,2,2,Crystal Palace,Leicester City,W,Crystal Palace
+0,0,2025-01-18,Leicester City,Fulham,L,Leicester City,2,2,Fulham,Leicester City,W,Fulham
+2,2,2025-01-26,Leicester City,Tottenham,W,Leicester City,0,2,Tottenham Hotspur,Leicester City,L,Tottenham
+0,2,2025-02-01,Leicester City,Everton,L,Leicester City,2,0,Everton,Leicester City,W,Everton
+0,0,2025-02-15,Leicester City,Arsenal,L,Leicester City,2,2,Arsenal,Leicester City,W,Arsenal
+0,0,2025-02-21,Leicester City,Brentford,L,Leicester City,2,2,Brentford,Leicester City,W,Brentford
+0,0,2025-02-27,Leicester City,West Ham,L,Leicester City,2,2,West Ham United,Leicester City,W,West Ham
+0,0,2025-03-09,Leicester City,Chelsea,L,Leicester City,2,2,Chelsea,Leicester City,W,Chelsea
+0,0,2025-03-16,Leicester City,Manchester Utd,L,Leicester City,2,2,Manchester United,Leicester City,W,Manchester Utd
+0,0,2025-04-02,Leicester City,Manchester City,L,Leicester City,2,2,Manchester City,Leicester City,W,Manchester City
+1,0,2025-04-12,Leicester City,Brighton,D,Leicester City,1,2,Brighton and Hove Albion,Leicester City,D,Brighton
+0,0,2025-04-20,Leicester City,Liverpool,L,Leicester City,2,2,Liverpool,Leicester City,W,Liverpool
+0,0,2025-04-26,Leicester City,Wolves,L,Leicester City,2,2,Wolverhampton Wanderers,Leicester City,W,Wolves
+2,2,2025-05-03,Leicester City,Southampton,W,Leicester City,0,0,Southampton,Leicester City,L,Southampton
+2,2,2025-05-18,Leicester City,Ipswich Town,W,Leicester City,0,0,Ipswich Town,Leicester City,L,Ipswich Town
+0,0,2025-05-25,Leicester City,Bournemouth,L,Leicester City,2,0,Bournemouth,Leicester City,W,Bournemouth
+1,2,2025-01-05,Liverpool,Manchester Utd,D,Liverpool,1,0,Manchester United,Liverpool,D,Manchester Utd
+2,2,2025-01-18,Liverpool,Brentford,W,Liverpool,0,0,Brentford,Liverpool,L,Brentford
+2,2,2025-01-25,Liverpool,Ipswich Town,W,Liverpool,0,0,Ipswich Town,Liverpool,L,Ipswich Town
+2,2,2025-02-01,Liverpool,Bournemouth,W,Liverpool,0,1,Bournemouth,Liverpool,L,Bournemouth
+1,2,2025-02-12,Liverpool,Everton,D,Liverpool,1,0,Everton,Liverpool,D,Everton
+2,2,2025-02-16,Liverpool,Wolves,W,Liverpool,0,0,Wolverhampton Wanderers,Liverpool,L,Wolves
+1,2,2025-02-19,Liverpool,Aston Villa,D,Liverpool,1,0,Aston Villa,Liverpool,D,Aston Villa
+2,0,2025-02-23,Liverpool,Manchester City,W,Liverpool,0,2,Manchester City,Liverpool,L,Manchester City
+2,2,2025-03-08,Liverpool,Southampton,W,Liverpool,0,0,Southampton,Liverpool,L,Southampton
+2,2,2025-04-02,Liverpool,Everton,W,Liverpool,0,0,Everton,Liverpool,L,Everton
+0,2,2025-04-06,Liverpool,Fulham,L,Liverpool,2,0,Fulham,Liverpool,W,Fulham
+2,2,2025-04-13,Liverpool,West Ham,W,Liverpool,0,0,West Ham United,Liverpool,L,West Ham
+2,2,2025-04-20,Liverpool,Leicester City,W,Liverpool,0,0,Leicester City,Liverpool,L,Leicester City
+2,2,2025-04-27,Liverpool,Tottenham,W,Liverpool,0,0,Tottenham Hotspur,Liverpool,L,Tottenham
+0,1,2025-05-04,Liverpool,Chelsea,L,Liverpool,2,0,Chelsea,Liverpool,W,Chelsea
+1,2,2025-05-11,Liverpool,Arsenal,D,Liverpool,1,0,Arsenal,Liverpool,D,Arsenal
+0,1,2025-05-19,Liverpool,Brighton,L,Liverpool,2,0,Brighton and Hove Albion,Liverpool,W,Brighton
+1,0,2025-05-25,Liverpool,Crystal Palace,D,Liverpool,1,2,Crystal Palace,Liverpool,D,Crystal Palace
+2,2,2025-08-15,Liverpool,Bournemouth,W,Liverpool,0,0,Bournemouth,Liverpool,L,Bournemouth
+2,0,2025-08-31,Liverpool,Arsenal,W,Liverpool,0,2,Arsenal,Liverpool,L,Arsenal
+2,1,2025-09-14,Liverpool,Burnley,W,Liverpool,0,1,Burnley,Liverpool,L,Burnley
+2,2,2025-09-20,Liverpool,Everton,W,Liverpool,0,2,Everton,Liverpool,L,Everton
+0,0,2025-09-27,Liverpool,Crystal Palace,L,Liverpool,2,0,Crystal Palace,Liverpool,W,Crystal Palace
+0,2,2025-10-04,Liverpool,Chelsea,L,Liverpool,2,0,Chelsea,Liverpool,W,Chelsea
+0,0,2025-10-19,Liverpool,Manchester Utd,L,Liverpool,2,2,Manchester United,Liverpool,W,Manchester Utd
+0,2,2025-10-25,Liverpool,Brentford,L,Liverpool,2,2,Brentford,Liverpool,W,Brentford
+2,0,2025-11-01,Liverpool,Aston Villa,W,Liverpool,0,0,Aston Villa,Liverpool,L,Aston Villa
+0,0,2025-11-09,Liverpool,Manchester City,L,Liverpool,2,2,Manchester City,Liverpool,W,Manchester City
+2,0,2025-11-30,Liverpool,West Ham,W,Liverpool,0,2,West Ham United,Liverpool,L,West Ham
+1,2,2025-12-03,Liverpool,Sunderland,D,Liverpool,1,0,Sunderland,Liverpool,D,Sunderland
+1,2,2025-12-06,Liverpool,Leeds United,D,Liverpool,1,0,Leeds United,Liverpool,D,Leeds United
+2,2,2025-12-13,Liverpool,Brighton,W,Liverpool,0,0,Brighton and Hove Albion,Liverpool,L,Brighton
+2,2,2025-01-04,Manchester City,West Ham,W,Manchester City,0,0,West Ham United,Manchester City,L,West Ham
+1,2,2025-01-14,Manchester City,Brentford,D,Manchester City,1,0,Brentford,Manchester City,D,Brentford
+2,2,2025-01-19,Manchester City,Ipswich Town,W,Manchester City,0,0,Ipswich Town,Manchester City,L,Ipswich Town
+2,2,2025-01-25,Manchester City,Chelsea,W,Manchester City,0,0,Chelsea,Manchester City,L,Chelsea
+0,2,2025-02-02,Manchester City,Arsenal,L,Manchester City,2,0,Arsenal,Manchester City,W,Arsenal
+0,2,2025-02-23,Manchester City,Liverpool,L,Manchester City,2,0,Liverpool,Manchester City,W,Liverpool
+2,0,2025-02-26,Manchester City,Tottenham,W,Manchester City,0,2,Tottenham Hotspur,Manchester City,L,Tottenham
+1,0,2025-03-15,Manchester City,Brighton,D,Manchester City,1,2,Brighton and Hove Albion,Manchester City,D,Brighton
+2,2,2025-04-02,Manchester City,Leicester City,W,Manchester City,0,0,Leicester City,Manchester City,L,Leicester City
+1,0,2025-04-06,Manchester City,Manchester Utd,D,Manchester City,1,2,Manchester United,Manchester City,D,Manchester Utd
+2,2,2025-04-12,Manchester City,Crystal Palace,W,Manchester City,0,0,Crystal Palace,Manchester City,L,Crystal Palace
+2,2,2025-04-19,Manchester City,Everton,W,Manchester City,0,0,Everton,Manchester City,L,Everton
+2,0,2025-04-22,Manchester City,Aston Villa,W,Manchester City,0,2,Aston Villa,Manchester City,L,Aston Villa
+2,2,2025-05-02,Manchester City,Wolves,W,Manchester City,0,0,Wolverhampton Wanderers,Manchester City,L,Wolves
+1,2,2025-05-10,Manchester City,Southampton,D,Manchester City,1,0,Southampton,Manchester City,D,Southampton
+2,2,2025-05-20,Manchester City,Bournemouth,W,Manchester City,0,0,Bournemouth,Manchester City,L,Bournemouth
+2,2,2025-05-25,Manchester City,Fulham,W,Manchester City,0,0,Fulham,Manchester City,L,Fulham
+2,2,2025-08-16,Manchester City,Wolves,W,Manchester City,0,0,Wolverhampton Wanderers,Manchester City,L,Wolves
+0,2,2025-08-23,Manchester City,Tottenham,L,Manchester City,2,0,Tottenham Hotspur,Manchester City,W,Tottenham
+0,2,2025-08-31,Manchester City,Brighton,L,Manchester City,2,0,Brighton and Hove Albion,Manchester City,W,Brighton
+2,0,2025-09-14,Manchester City,Manchester Utd,W,Manchester City,0,2,Manchester United,Manchester City,L,Manchester Utd
+1,0,2025-09-21,Manchester City,Arsenal,D,Manchester City,1,2,Arsenal,Manchester City,D,Arsenal
+2,2,2025-09-27,Manchester City,Burnley,W,Manchester City,0,0,Burnley,Manchester City,L,Burnley
+2,0,2025-10-05,Manchester City,Brentford,W,Manchester City,0,2,Brentford,Manchester City,L,Brentford
+2,2,2025-10-18,Manchester City,Everton,W,Manchester City,0,0,Everton,Manchester City,L,Everton
+0,2,2025-10-26,Manchester City,Aston Villa,L,Manchester City,2,0,Aston Villa,Manchester City,W,Aston Villa
+2,2,2025-11-02,Manchester City,Bournemouth,W,Manchester City,0,0,Bournemouth,Manchester City,L,Bournemouth
+2,2,2025-11-09,Manchester City,Liverpool,W,Manchester City,0,0,Liverpool,Manchester City,L,Liverpool
+2,2,2025-11-29,Manchester City,Leeds United,W,Manchester City,0,0,Leeds United,Manchester City,L,Leeds United
+2,2,2025-12-02,Manchester City,Fulham,W,Manchester City,0,0,Fulham,Manchester City,L,Fulham
+2,2,2025-12-06,Manchester City,Sunderland,W,Manchester City,0,0,Sunderland,Manchester City,L,Sunderland
+2,1,2025-12-14,Manchester City,Crystal Palace,W,Manchester City,0,0,Crystal Palace,Manchester City,L,Crystal Palace
+1,0,2025-01-05,Manchester United,Liverpool,D,Manchester Utd,1,2,Liverpool,Manchester Utd,D,Liverpool
+2,2,2025-01-16,Manchester United,Southampton,W,Manchester Utd,0,0,Southampton,Manchester Utd,L,Southampton
+0,2,2025-01-19,Manchester United,Brighton,L,Manchester Utd,2,0,Brighton and Hove Albion,Manchester Utd,W,Brighton
+2,0,2025-01-26,Manchester United,Fulham,W,Manchester Utd,0,2,Fulham,Manchester Utd,L,Fulham
+0,2,2025-02-02,Manchester United,Crystal Palace,L,Manchester Utd,2,2,Crystal Palace,Manchester Utd,W,Crystal Palace
+0,0,2025-02-16,Manchester United,Tottenham,L,Manchester Utd,2,2,Tottenham Hotspur,Manchester Utd,W,Tottenham
+1,0,2025-02-22,Manchester United,Everton,D,Manchester Utd,1,2,Everton,Manchester Utd,D,Everton
+2,2,2025-02-26,Manchester United,Ipswich Town,W,Manchester Utd,0,0,Ipswich Town,Manchester Utd,L,Ipswich Town
+1,0,2025-03-09,Manchester United,Arsenal,D,Manchester Utd,1,0,Arsenal,Manchester Utd,D,Arsenal
+2,2,2025-03-16,Manchester United,Leicester City,W,Manchester Utd,0,0,Leicester City,Manchester Utd,L,Leicester City
+1,2,2025-04-06,Manchester United,Manchester City,D,Manchester Utd,1,0,Manchester City,Manchester Utd,D,Manchester City
+0,0,2025-04-20,Manchester United,Wolves,L,Manchester Utd,2,2,Wolverhampton Wanderers,Manchester Utd,W,Wolves
+1,0,2025-04-27,Manchester United,Bournemouth,D,Manchester Utd,1,2,Bournemouth,Manchester Utd,D,Bournemouth
+0,2,2025-05-04,Manchester United,Brentford,L,Manchester Utd,2,0,Brentford,Manchester Utd,W,Brentford
+0,2,2025-05-11,Manchester United,West Ham,L,Manchester Utd,2,0,West Ham United,Manchester Utd,W,West Ham
+0,2,2025-05-16,Manchester United,Chelsea,L,Manchester Utd,2,0,Chelsea,Manchester Utd,W,Chelsea
+2,0,2025-05-25,Manchester United,Aston Villa,W,Manchester Utd,0,0,Aston Villa,Manchester Utd,L,Aston Villa
+0,0,2025-08-17,Manchester United,Arsenal,L,Manchester Utd,2,2,Arsenal,Manchester Utd,W,Arsenal
+1,2,2025-08-24,Manchester United,Fulham,D,Manchester Utd,1,0,Fulham,Manchester Utd,D,Fulham
+2,2,2025-08-30,Manchester United,Burnley,W,Manchester Utd,0,0,Burnley,Manchester Utd,L,Burnley
+0,2,2025-09-14,Manchester United,Manchester City,L,Manchester Utd,2,0,Manchester City,Manchester Utd,W,Manchester City
+2,0,2025-09-20,Manchester United,Chelsea,W,Manchester Utd,0,2,Chelsea,Manchester Utd,L,Chelsea
+0,2,2025-09-27,Manchester United,Brentford,L,Manchester Utd,2,0,Brentford,Manchester Utd,W,Brentford
+2,2,2025-10-04,Manchester United,Sunderland,W,Manchester Utd,0,0,Sunderland,Manchester Utd,L,Sunderland
+2,2,2025-10-19,Manchester United,Liverpool,W,Manchester Utd,0,0,Liverpool,Manchester Utd,L,Liverpool
+2,2,2025-10-25,Manchester United,Brighton,W,Manchester Utd,0,0,Brighton and Hove Albion,Manchester Utd,L,Brighton
+1,2,2025-11-08,Manchester United,Tottenham,D,Manchester Utd,1,0,Tottenham Hotspur,Manchester Utd,D,Tottenham
+0,2,2025-11-24,Manchester United,Everton,L,Manchester Utd,2,0,Everton,Manchester Utd,W,Everton
+2,2,2025-11-30,Manchester United,Crystal Palace,W,Manchester Utd,0,0,Crystal Palace,Manchester Utd,L,Crystal Palace
+1,2,2025-12-04,Manchester United,West Ham,D,Manchester Utd,1,0,West Ham United,Manchester Utd,D,West Ham
+2,0,2025-12-08,Manchester United,Wolves,W,Manchester Utd,0,0,Wolverhampton Wanderers,Manchester Utd,L,Wolves
+1,2,2025-12-15,Manchester United,Bournemouth,D,Manchester Utd,1,0,Bournemouth,Manchester Utd,D,Bournemouth
+0,0,2025-01-04,Southampton,Brentford,L,Southampton,2,0,Brentford,Southampton,W,Brentford
+0,0,2025-01-16,Southampton,Manchester Utd,L,Southampton,2,2,Manchester United,Southampton,W,Manchester Utd
+2,0,2025-02-01,Southampton,Ipswich Town,W,Southampton,0,2,Ipswich Town,Southampton,L,Ipswich Town
+0,0,2025-02-15,Southampton,Bournemouth,L,Southampton,2,2,Bournemouth,Southampton,W,Bournemouth
+0,0,2025-02-22,Southampton,Brighton,L,Southampton,2,2,Brighton and Hove Albion,Southampton,W,Brighton
+0,0,2025-02-25,Southampton,Chelsea,L,Southampton,2,2,Chelsea,Southampton,W,Chelsea
+0,0,2025-03-08,Southampton,Liverpool,L,Southampton,2,2,Liverpool,Southampton,W,Liverpool
+0,0,2025-03-15,Southampton,Wolves,L,Southampton,2,2,Wolverhampton Wanderers,Southampton,W,Wolves
+1,0,2025-04-02,Southampton,Crystal Palace,D,Southampton,1,2,Crystal Palace,Southampton,D,Crystal Palace
+0,0,2025-04-06,Southampton,Tottenham,L,Southampton,2,2,Tottenham Hotspur,Southampton,W,Tottenham
+0,0,2025-04-12,Southampton,Aston Villa,L,Southampton,2,2,Aston Villa,Southampton,W,Aston Villa
+1,0,2025-04-19,Southampton,West Ham,D,Southampton,1,2,West Ham United,Southampton,D,West Ham
+0,0,2025-04-26,Southampton,Fulham,L,Southampton,2,0,Fulham,Southampton,W,Fulham
+0,0,2025-05-03,Southampton,Leicester City,L,Southampton,2,2,Leicester City,Southampton,W,Leicester City
+1,0,2025-05-10,Southampton,Manchester City,D,Southampton,1,2,Manchester City,Southampton,D,Manchester City
+0,0,2025-05-18,Southampton,Everton,L,Southampton,2,2,Everton,Southampton,W,Everton
+0,0,2025-05-25,Southampton,Arsenal,L,Southampton,2,2,Arsenal,Southampton,W,Arsenal
+1,0,2025-09-13,Sunderland,Crystal Palace,D,Sunderland,1,2,Crystal Palace,Sunderland,D,Crystal Palace
+1,0,2025-09-21,Sunderland,Aston Villa,D,Sunderland,1,2,Aston Villa,Sunderland,D,Aston Villa
+0,0,2025-10-04,Sunderland,Manchester Utd,L,Sunderland,2,2,Manchester United,Sunderland,W,Manchester Utd
+2,2,2025-10-18,Sunderland,Wolves,W,Sunderland,0,0,Wolverhampton Wanderers,Sunderland,L,Wolves
+2,0,2025-10-25,Sunderland,Chelsea,W,Sunderland,0,2,Chelsea,Sunderland,L,Chelsea
+1,0,2025-11-03,Sunderland,Everton,D,Sunderland,1,0,Everton,Sunderland,D,Everton
+1,0,2025-11-08,Sunderland,Arsenal,D,Sunderland,1,2,Arsenal,Sunderland,D,Arsenal
+0,0,2025-11-22,Sunderland,Fulham,L,Sunderland,2,2,Fulham,Sunderland,W,Fulham
+2,0,2025-11-29,Sunderland,Bournemouth,W,Sunderland,0,0,Bournemouth,Sunderland,L,Bournemouth
+1,0,2025-12-03,Sunderland,Liverpool,D,Sunderland,1,2,Liverpool,Sunderland,D,Liverpool
+0,0,2025-12-06,Sunderland,Manchester City,L,Sunderland,2,2,Manchester City,Sunderland,W,Manchester City
+0,0,2025-01-15,Tottenham Hotspur,Arsenal,L,Tottenham,2,2,Arsenal,Tottenham,W,Arsenal
+0,2,2025-01-19,Tottenham Hotspur,Everton,L,Tottenham,2,2,Everton,Tottenham,W,Everton
+0,2,2025-01-26,Tottenham Hotspur,Leicester City,L,Tottenham,2,2,Leicester City,Tottenham,W,Leicester City
+2,0,2025-02-02,Tottenham Hotspur,Brentford,W,Tottenham,0,2,Brentford,Tottenham,L,Brentford
+2,2,2025-02-16,Tottenham Hotspur,Manchester Utd,W,Tottenham,0,0,Manchester United,Tottenham,L,Manchester Utd
+2,2,2025-02-22,Tottenham Hotspur,Ipswich Town,W,Tottenham,0,0,Ipswich Town,Tottenham,L,Ipswich Town
+0,2,2025-02-26,Tottenham Hotspur,Manchester City,L,Tottenham,2,0,Manchester City,Tottenham,W,Manchester City
+1,2,2025-03-09,Tottenham Hotspur,Bournemouth,D,Tottenham,1,0,Bournemouth,Tottenham,D,Bournemouth
+0,2,2025-03-16,Tottenham Hotspur,Fulham,L,Tottenham,2,0,Fulham,Tottenham,W,Fulham
+0,0,2025-04-03,Tottenham Hotspur,Chelsea,L,Tottenham,2,2,Chelsea,Tottenham,W,Chelsea
+2,2,2025-04-06,Tottenham Hotspur,Southampton,W,Tottenham,0,0,Southampton,Tottenham,L,Southampton
+0,0,2025-04-13,Tottenham Hotspur,Wolves,L,Tottenham,2,2,Wolverhampton Wanderers,Tottenham,W,Wolves
+0,0,2025-04-27,Tottenham Hotspur,Liverpool,L,Tottenham,2,2,Liverpool,Tottenham,W,Liverpool
+1,2,2025-05-04,Tottenham Hotspur,West Ham,D,Tottenham,1,0,West Ham United,Tottenham,D,West Ham
+0,0,2025-05-11,Tottenham Hotspur,Crystal Palace,L,Tottenham,2,2,Crystal Palace,Tottenham,W,Crystal Palace
+0,0,2025-05-16,Tottenham Hotspur,Aston Villa,L,Tottenham,2,2,Aston Villa,Tottenham,W,Aston Villa
+0,0,2025-05-25,Tottenham Hotspur,Brighton,L,Tottenham,2,2,Brighton and Hove Albion,Tottenham,W,Brighton
+2,0,2025-08-16,Tottenham Hotspur,Burnley,W,Tottenham,0,2,Burnley,Tottenham,L,Burnley
+2,0,2025-08-23,Tottenham Hotspur,Manchester City,W,Tottenham,0,2,Manchester City,Tottenham,L,Manchester City
+0,0,2025-08-30,Tottenham Hotspur,Bournemouth,L,Tottenham,2,2,Bournemouth,Tottenham,W,Bournemouth
+2,0,2025-09-13,Tottenham Hotspur,West Ham,W,Tottenham,0,2,West Ham United,Tottenham,L,West Ham
+1,2,2025-09-20,Tottenham Hotspur,Brighton,D,Tottenham,1,2,Brighton and Hove Albion,Tottenham,D,Brighton
+1,2,2025-09-27,Tottenham Hotspur,Wolves,D,Tottenham,1,0,Wolverhampton Wanderers,Tottenham,D,Wolves
+2,0,2025-10-04,Tottenham Hotspur,Leeds United,W,Tottenham,0,2,Leeds United,Tottenham,L,Leeds United
+0,0,2025-10-19,Tottenham Hotspur,Aston Villa,L,Tottenham,2,2,Aston Villa,Tottenham,W,Aston Villa
+2,0,2025-10-26,Tottenham Hotspur,Everton,W,Tottenham,0,2,Everton,Tottenham,L,Everton
+0,0,2025-11-01,Tottenham Hotspur,Chelsea,L,Tottenham,2,2,Chelsea,Tottenham,W,Chelsea
+1,0,2025-11-08,Tottenham Hotspur,Manchester Utd,D,Tottenham,1,2,Manchester United,Tottenham,D,Manchester Utd
+0,0,2025-11-23,Tottenham Hotspur,Arsenal,L,Tottenham,2,2,Arsenal,Tottenham,W,Arsenal
+0,0,2025-11-29,Tottenham Hotspur,Fulham,L,Tottenham,2,2,Fulham,Tottenham,W,Fulham
+2,0,2025-12-06,Tottenham Hotspur,Brentford,W,Tottenham,0,2,Brentford,Tottenham,L,Brentford
+0,0,2025-01-04,West Ham United,Manchester City,L,West Ham,2,2,Manchester City,West Ham,W,Manchester City
+2,2,2025-01-14,West Ham United,Fulham,W,West Ham,0,2,Fulham,West Ham,L,Fulham
+0,0,2025-01-18,West Ham United,Crystal Palace,L,West Ham,2,2,Crystal Palace,West Ham,W,Crystal Palace
+1,0,2025-01-26,West Ham United,Aston Villa,D,West Ham,1,2,Aston Villa,West Ham,D,Aston Villa
+0,0,2025-02-03,West Ham United,Chelsea,L,West Ham,2,2,Chelsea,West Ham,W,Chelsea
+0,0,2025-02-15,West Ham United,Brentford,L,West Ham,2,2,Brentford,West Ham,W,Brentford
+2,0,2025-02-22,West Ham United,Arsenal,W,West Ham,0,2,Arsenal,West Ham,L,Arsenal
+2,2,2025-02-27,West Ham United,Leicester City,W,West Ham,0,0,Leicester City,West Ham,L,Leicester City
+1,0,2025-03-15,West Ham United,Everton,D,West Ham,1,2,Everton,West Ham,D,Everton
+0,0,2025-04-01,West Ham United,Wolves,L,West Ham,2,2,Wolverhampton Wanderers,West Ham,W,Wolves
+1,0,2025-04-05,West Ham United,Bournemouth,D,West Ham,1,2,Bournemouth,West Ham,D,Bournemouth
+0,0,2025-04-13,West Ham United,Liverpool,L,West Ham,2,2,Liverpool,West Ham,W,Liverpool
+1,2,2025-04-19,West Ham United,Southampton,D,West Ham,1,0,Southampton,West Ham,D,Southampton
+0,0,2025-04-26,West Ham United,Brighton,L,West Ham,2,2,Brighton and Hove Albion,West Ham,W,Brighton
+1,0,2025-05-04,West Ham United,Tottenham,D,West Ham,1,2,Tottenham Hotspur,West Ham,D,Tottenham
+2,0,2025-05-11,West Ham United,Manchester Utd,W,West Ham,0,2,Manchester United,West Ham,L,Manchester Utd
+2,0,2025-05-25,West Ham United,Ipswich Town,W,West Ham,0,2,Ipswich Town,West Ham,L,Ipswich Town
+0,1,2025-08-22,West Ham United,Chelsea,L,West Ham,2,2,Chelsea,West Ham,W,Chelsea
+0,2,2025-09-13,West Ham United,Tottenham,L,West Ham,2,0,Tottenham Hotspur,West Ham,W,Tottenham
+0,2,2025-09-20,West Ham United,Crystal Palace,L,West Ham,2,0,Crystal Palace,West Ham,W,Crystal Palace
+1,0,2025-09-29,West Ham United,Everton,D,West Ham,1,2,Everton,West Ham,D,Everton
+0,0,2025-10-04,West Ham United,Arsenal,L,West Ham,2,2,Arsenal,West Ham,W,Arsenal
+0,2,2025-10-20,West Ham United,Brentford,L,West Ham,2,0,Brentford,West Ham,W,Brentford
+0,0,2025-10-24,West Ham United,Leeds United,L,West Ham,2,2,Leeds United,West Ham,W,Leeds United
+2,0,2025-11-08,West Ham United,Burnley,W,West Ham,0,2,Burnley,West Ham,L,Burnley
+1,2,2025-11-22,West Ham United,Bournemouth,D,West Ham,1,0,Bournemouth,West Ham,D,Bournemouth
+0,2,2025-11-30,West Ham United,Liverpool,L,West Ham,2,0,Liverpool,West Ham,W,Liverpool
+1,0,2025-12-04,West Ham United,Manchester Utd,D,West Ham,1,2,Manchester United,West Ham,D,Manchester Utd
+1,0,2025-12-07,West Ham United,Brighton,D,West Ham,1,2,Brighton and Hove Albion,West Ham,D,Brighton
+0,0,2025-12-14,West Ham United,Aston Villa,L,West Ham,2,2,Aston Villa,West Ham,W,Aston Villa
+0,0,2025-01-20,Wolverhampton Wanderers,Chelsea,L,Wolves,2,2,Chelsea,Wolves,W,Chelsea
+0,0,2025-01-25,Wolverhampton Wanderers,Arsenal,L,Wolves,2,2,Arsenal,Wolves,W,Arsenal
+2,0,2025-02-01,Wolverhampton Wanderers,Aston Villa,W,Wolves,0,0,Aston Villa,Wolves,L,Aston Villa
+0,0,2025-02-16,Wolverhampton Wanderers,Liverpool,L,Wolves,2,2,Liverpool,Wolves,W,Liverpool
+2,0,2025-02-22,Wolverhampton Wanderers,Bournemouth,W,Wolves,0,2,Bournemouth,Wolves,L,Bournemouth
+0,0,2025-02-25,Wolverhampton Wanderers,Fulham,L,Wolves,2,2,Fulham,Wolves,W,Fulham
+1,2,2025-03-08,Wolverhampton Wanderers,Everton,D,Wolves,1,0,Everton,Wolves,D,Everton
+2,2,2025-03-15,Wolverhampton Wanderers,Southampton,W,Wolves,0,0,Southampton,Wolves,L,Southampton
+2,2,2025-04-01,Wolverhampton Wanderers,West Ham,W,Wolves,0,0,West Ham United,Wolves,L,West Ham
+2,0,2025-04-05,Wolverhampton Wanderers,Ipswich Town,W,Wolves,0,2,Ipswich Town,Wolves,L,Ipswich Town
+2,2,2025-04-13,Wolverhampton Wanderers,Tottenham,W,Wolves,0,0,Tottenham Hotspur,Wolves,L,Tottenham
+2,2,2025-04-20,Wolverhampton Wanderers,Manchester Utd,W,Wolves,0,0,Manchester United,Wolves,L,Manchester Utd
+2,2,2025-04-26,Wolverhampton Wanderers,Leicester City,W,Wolves,0,0,Leicester City,Wolves,L,Leicester City
+0,0,2025-05-02,Wolverhampton Wanderers,Manchester City,L,Wolves,2,2,Manchester City,Wolves,W,Manchester City
+0,0,2025-05-10,Wolverhampton Wanderers,Brighton,L,Wolves,2,2,Brighton and Hove Albion,Wolves,W,Brighton
+0,0,2025-05-20,Wolverhampton Wanderers,Crystal Palace,L,Wolves,2,2,Crystal Palace,Wolves,W,Crystal Palace
+1,0,2025-05-25,Wolverhampton Wanderers,Brentford,D,Wolves,1,2,Brentford,Wolves,D,Brentford
+0,0,2025-08-16,Wolverhampton Wanderers,Manchester City,L,Wolves,2,2,Manchester City,Wolves,W,Manchester City
+0,0,2025-08-23,Wolverhampton Wanderers,Bournemouth,L,Wolves,2,2,Bournemouth,Wolves,W,Bournemouth
+0,0,2025-08-30,Wolverhampton Wanderers,Everton,L,Wolves,2,2,Everton,Wolves,W,Everton
+0,0,2025-09-20,Wolverhampton Wanderers,Leeds United,L,Wolves,2,0,Leeds United,Wolves,W,Leeds United
+1,0,2025-09-27,Wolverhampton Wanderers,Tottenham,D,Wolves,1,2,Tottenham Hotspur,Wolves,D,Tottenham
+1,2,2025-10-05,Wolverhampton Wanderers,Brighton,D,Wolves,1,0,Brighton and Hove Albion,Wolves,D,Brighton
+0,0,2025-10-18,Wolverhampton Wanderers,Sunderland,L,Wolves,2,2,Sunderland,Wolves,W,Sunderland
+0,2,2025-10-26,Wolverhampton Wanderers,Burnley,L,Wolves,2,0,Burnley,Wolves,W,Burnley
+0,2,2025-11-01,Wolverhampton Wanderers,Fulham,L,Wolves,2,0,Fulham,Wolves,W,Fulham
+0,0,2025-11-08,Wolverhampton Wanderers,Chelsea,L,Wolves,2,2,Chelsea,Wolves,W,Chelsea
+0,0,2025-11-22,Wolverhampton Wanderers,Crystal Palace,L,Wolves,2,2,Crystal Palace,Wolves,W,Crystal Palace
+0,0,2025-11-30,Wolverhampton Wanderers,Aston Villa,L,Wolves,2,2,Aston Villa,Wolves,W,Aston Villa
+0,0,2025-12-08,Wolverhampton Wanderers,Manchester Utd,L,Wolves,2,0,Manchester United,Wolves,W,Manchester Utd
+0,0,2025-12-13,Wolverhampton Wanderers,Arsenal,L,Wolves,2,2,Arsenal,Wolves,W,Arsenal
