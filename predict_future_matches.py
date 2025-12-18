@@ -185,9 +185,9 @@ def train_model():
     # Train Random Forest
     print("Training model...")
     # Use sample weights to favor recent seasons
-    # 2025 is most important, 2020 least
-    # Drastically increased 2025 weight to prioritize current form over historical trends
-    season_weights = {2020: 0.2, 2021: 0.2, 2022: 0.5, 2023: 1, 2024: 3, 2025: 15}
+    # Adjusted to balance Current Form (2025) with Historical Class (2023-24)
+    # This prevents teams having a "hot start" (like Villa) from being overrated vs consistent giants (Arsenal)
+    season_weights = {2020: 0.5, 2021: 0.5, 2022: 1, 2023: 2, 2024: 4, 2025: 6}
     sample_weights = matches_rolling["season"].map(season_weights).fillna(1)
 
     rf = RandomForestClassifier(n_estimators=100, min_samples_split=10, random_state=1)
