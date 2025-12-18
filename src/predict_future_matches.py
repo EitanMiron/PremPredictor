@@ -1,5 +1,6 @@
 import pandas as pd
 import time
+import os
 from sklearn.ensemble import RandomForestClassifier
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -13,6 +14,10 @@ from bs4 import BeautifulSoup
 # ---------------------------------------------------------
 # 1. SETUP & CONFIGURATION
 # ---------------------------------------------------------
+# Define paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
 # Team name mapping to ensure consistency between schedule and historical data
 map_values = {
     "Brighton and Hove Albion": "Brighton",
@@ -36,7 +41,7 @@ def clean_team_name(name):
 def get_upcoming_fixtures():
     # Check if fixtures are already saved to avoid re-scraping
     try:
-        fixtures = pd.read_csv("fixtures.csv")
+        fixtures = pd.read_csv(os.path.join(DATA_DIR, "fixtures.csv"))
         print("Loaded fixtures from fixtures.csv")
         return fixtures
     except FileNotFoundError:
@@ -97,7 +102,7 @@ def get_upcoming_fixtures():
                         
         print(f"Found {len(fixtures)} upcoming matches.")
         df = pd.DataFrame(fixtures)
-        df.to_csv("fixtures.csv", index=False)
+        df.to_csv(os.path.join(DATA_DIR, "fixtures.csv"), index=False)
         return df
         
     except Exception as e:
@@ -112,11 +117,11 @@ def get_upcoming_fixtures():
 def train_model():
     print("Loading historical data...")
     # Load past data
-    matches = pd.read_csv('matches_data.csv')
+    matches = pd.read_csv(os.path.join(DATA_DIR, 'matches_data.csv'))
     
     # Load current season played matches
     try:
-        current_season = pd.read_csv('future_matches_2025.csv')
+        current_season = pd.read_csv(os.path.join(DATA_DIR, 'future_matches_2025.csv'))
         # Align columns if necessary
         matches = pd.concat([matches, current_season], ignore_index=True)
     except FileNotFoundError:
@@ -303,7 +308,7 @@ if __name__ == "__main__":
         print(results.to_string(index=False))
         
         # Save
-        results.to_csv("upcoming_predictions.csv", index=False)
+        results.to_csv(os.path.join(DATA_DIR, "upcoming_predictions.csv"), index=False)
         print("\nSaved to upcoming_predictions.csv")
     else:
         print("No upcoming fixtures found.")

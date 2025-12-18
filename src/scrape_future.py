@@ -13,6 +13,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
+import os
+
+# Define paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
 
 # Set up Chrome driver
 # Note: Running in non-headless mode to avoid Cloudflare bot protection
@@ -131,7 +136,7 @@ if standings_table is None:
 if standings_table is None:
     print("Could not find standings table with any method.")
     print("Saving page source for debugging...")
-    with open("debug_page.html", "w", encoding="utf-8") as f:
+    with open(os.path.join(BASE_DIR, 'output', "debug_page.html"), "w", encoding="utf-8") as f:
         f.write(page_source)
     print("Page source saved to debug_page.html")
     driver.quit()
@@ -272,7 +277,7 @@ if all_teams_data:
     combined_df.columns = [c.lower() for c in combined_df.columns]
     
     # Save the DataFrame to a CSV file
-    combined_df.to_csv("future_matches_2025.csv", index=False)
+    combined_df.to_csv(os.path.join(DATA_DIR, "future_matches_2025.csv"), index=False)
     print(f"✅ Saved {len(combined_df)} matches to future_matches_2025.csv")
 else:
     print("❌ No data was collected.")

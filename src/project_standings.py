@@ -1,9 +1,14 @@
 import pandas as pd
 import numpy as np
+import os
 
 # ---------------------------------------------------------
 # 1. CONFIGURATION
 # ---------------------------------------------------------
+# Define paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
 # Map team names from historical data to prediction data if they differ
 map_values = {
     "Brighton and Hove Albion": "Brighton",
@@ -27,7 +32,7 @@ def clean_team_name(name):
 def get_current_standings():
     print("Calculating current standings...")
     try:
-        df = pd.read_csv("future_matches_2025.csv")
+        df = pd.read_csv(os.path.join(DATA_DIR, "future_matches_2025.csv"))
     except FileNotFoundError:
         print("Error: future_matches_2025.csv not found.")
         return pd.DataFrame()
@@ -64,7 +69,7 @@ def get_current_standings():
 def run_monte_carlo_simulation(current_standings, num_simulations=1000):
     print(f"Running {num_simulations} Monte Carlo simulations...")
     try:
-        preds = pd.read_csv("upcoming_predictions.csv")
+        preds = pd.read_csv(os.path.join(DATA_DIR, "upcoming_predictions.csv"))
     except FileNotFoundError:
         print("Error: upcoming_predictions.csv not found.")
         return pd.DataFrame()
@@ -186,5 +191,5 @@ if __name__ == "__main__":
         print(final_table[cols].to_string(index=False))
         
         # Save
-        final_table.to_csv("projected_standings.csv", index=False)
+        final_table.to_csv(os.path.join(DATA_DIR, "projected_standings.csv"), index=False)
         print("\nSaved to projected_standings.csv")

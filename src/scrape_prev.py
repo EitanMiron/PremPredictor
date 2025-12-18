@@ -10,6 +10,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
+import os
+
+# Define paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
 
 
 options = Options()
@@ -563,7 +568,7 @@ team_df.columns = [c.lower() for c in team_df.columns]
 #print(team_df)
 
 # Save the DataFrame to a CSV file
-team_df.to_csv("matches_data.csv", index=False)
+team_df.to_csv(os.path.join(DATA_DIR, "matches_data.csv"), index=False)
 driver.quit()
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------------------------------

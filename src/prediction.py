@@ -1,9 +1,14 @@
 import pandas as pd
+import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, classification_report
 
+# Define paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
 # Load the dataset
-matches = pd.read_csv('matches_data.csv')
+matches = pd.read_csv(os.path.join(DATA_DIR, 'matches_data.csv'))
 
 # Convert date column to datetime
 matches["date"] = pd.to_datetime(matches["date"], format="%Y-%m-%d")
