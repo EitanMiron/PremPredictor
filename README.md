@@ -29,17 +29,37 @@ A comprehensive Python application that predicts the final standings of the Engl
 PremPredictor/
 ├── backend/
 │   ├── app.py                 # Main Flask application entry point
-│   ├── src/
-│   │   ├── scrape_prev.py     # Scrapes past match results
-│   │   ├── scrape_future.py   # Scrapes upcoming fixtures
-│   │   ├── project_standings.py # Core Monte Carlo simulation logic
-│   │   └── prediction.py      # Prediction model logic
-│   └── data/                  # CSV storage for match data and projections
-├── frontend/
-│   └── templates/             # HTML templates for the web interface
+│   ├── main.py                # Script runner / entry point
+│   ├── data/                  # CSV storage for match data and projections
+│   │   ├── fixtures.csv
+│   │   ├── future_matches_2025.csv
+│   │   ├── matches_data.csv
+│   │   ├── predictions.csv
+│   │   ├── projected_standings.csv
+│   │   └── upcoming_predictions.csv
+│   ├── output/                # Generated output files
+│   └── src/                   # Source code for logic and scraping
+│       ├── predict_future_matches.py
+│       ├── prediction.py      # Prediction model logic
+│       ├── project_standings.py # Core Monte Carlo simulation logic
+│       ├── scrape_future.py   # Scrapes upcoming fixtures
+│       ├── scrape_prev.py     # Scrapes past match results
+│       └── test_thresholds.py
 ├── docs/                      # Documentation files
+│   ├── PREDICTION_PLAN.md
+│   ├── README_DEPLOY.md
+│   └── README.md
+├── frontend/
+│   ├── images/                # Static images
+│   ├── scripts/               # JavaScript files
+│   │   └── script.js
+│   ├── styles/                # CSS stylesheets
+│   │   └── style.css
+│   └── templates/             # HTML templates
+│       └── index.html
 ├── Dockerfile                 # Docker configuration for deployment
 ├── Procfile                   # Command for Render/Heroku deployment
+├── README.md                  # Project documentation
 └── requirements.txt           # Python dependencies
 ```
 
