@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file, redirect, url_for, flash
+from flask import Flask, render_template, send_file, redirect, url_for, flash, send_from_directory
 import pandas as pd
 import matplotlib
 matplotlib.use('Agg') # Use non-interactive backend
@@ -11,11 +11,25 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 from project_standings import get_current_standings, run_monte_carlo_simulation
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../frontend/templates', static_folder=None)
 app.secret_key = 'premier_league_predictor_secret_key' # Required for flash messages
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
+@app.route('/styles/<path:filename>')
+def serve_styles(filename):
+    return send_from_directory(os.path.join(BASE_DIR, '..', 'frontend', 'styles'), filename)
+
+@app.route('/scripts/<path:filename>')
+def serve_scripts(filename):
+    return send_from_directory(os.path.join(BASE_DIR, '..', 'frontend', 'scripts'), filename)
+
+@app.route('/images/<path:filename>')
+def serve_images(filename):
+    return send_from_directory(os.path.join(BASE_DIR, '..', 'frontend', 'images'), filename)
+
+# Renders the main dashboard page, displaying the projected standings table.
+# It loads data from a CSV or runs a simulation if the file is missing.
 @app.route('/')
 def index():
     # Load projected standings if available, otherwise run simulation
@@ -35,12 +49,14 @@ def index():
     standings = df.to_dict('records')
     return render_template('index.html', standings=standings)
 
+# Triggers a new Monte Carlo simulation to update the projected standings.
+# It saves the results to a CSV file and redirects back to the index.
 @app.route('/run/simulate', methods=['POST'])
 def run_simulate():
     try:
         current = get_current_standings()
         if current:
-            df = run_monte_carlo_simulation(current, num_simulations=5000)
+            df = run_monte_carlo_simulation(current, num_simulations=1000)
             df = df.sort_values("Projected Points", ascending=False)
             
             # Save projections
@@ -52,6 +68,7 @@ def run_simulate():
         flash(f"Error during simulation: {str(e)}", "error")
     return redirect(url_for('index'))
 
+# Generates and returns a bar chart image showing the title probabilities for contending teams.
 @app.route('/plot/title_race')
 def plot_title_race():
     try:
@@ -94,6 +111,7 @@ def plot_title_race():
         print(f"Error in plot_title_race: {e}")
         return str(e), 500
 
+# Generates and returns a bar chart image showing the relegation probabilities for teams at risk.
 @app.route('/plot/relegation')
 def plot_relegation():
     try:
