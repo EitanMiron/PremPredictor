@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('serve_styles', filename='style.css') }}">
+</head>
+<body>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger-menu" onclick="openNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Side Menu -->
+    <div id="mySidenav" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a onclick="openModal('updateDataModal')">How to Update Data</a>
+        <a onclick="openModal('learnMoreModal')">Learn More</a>
+        <a onclick="openModal('whyCreatedModal')">Project Inspiration</a>
+    </div>
+
+    <!-- Modals -->
+    <div id="updateDataModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('updateDataModal')">&times;</span>
+            <div class="modal-header">
+                <h2>How to Update Data ℹ️</h2>
+            </div>
+            <p>
+                To fetch the latest match results and generate new predictions, run the following command in your terminal:
+            </p>
+            <p>
+                <code>python main.py --scrape --predict</code>
+            </p>
+        </div>
+    </div>
+
+    <div id="learnMoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('learnMoreModal')">&times;</span>
+            <div class="modal-header">
+                <h2>About This Project</h2>
+            </div>
+            <p>
+                I began this project halfway through the current EPL 2025-2026 season. This context is important because the initial data and predictions are based on the state of the league at that specific point in time.
+            </p>
+            <p>
+                The goal is to simulate the remainder of the season from that starting point, using Monte Carlo simulations to project final standings based on team performance metrics.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                <h3 style="color: #3D195B; margin-bottom: 10px;">Data & Methodology</h3>
+                <p>
+                    <strong>Data Collection:</strong> Historical match data and future fixtures are scraped from <a href="https://fbref.com" target="_blank" style="color: #3D195B; text-decoration: underline;">FBref.com</a> using Selenium and BeautifulSoup. This ensures the model has access to the most up-to-date team statistics.
+                </p>
+                <p>
+                    <strong>Model Training:</strong> The core prediction engine uses a <strong>Random Forest Classifier</strong> trained on historical match data. Key features include venue (home/away), opponent strength, match timing, and rolling averages of team performance metrics (goals, shots, etc.) to capture current form.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="whyCreatedModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('whyCreatedModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Project Inspiration</h2>
+            </div>
+            <p>
+                Combining my passion for the Premier League with data analysis and programming allows me to explore interesting "what-if" scenarios while honing my technical skills. It's not just about the code; it's about the fun of predicting the beautiful game. I created this project because I love soccer and I believe in the importance of building projects that excite you.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="{{ url_for('serve_images', filename='pl_logo.png') }}" alt="Premier League Logo" class="logo">
+        </div>
+        <h1>Premier League Season Projection</h1>
+        
+        <!-- Flash Messages -->
+        <div class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <!-- Actions Control Panel -->
+        <div class="card" style="margin-bottom: 20px; text-align: center;">
+            <h3 style="margin-top: 0;">Control Panel</h3>
+            
+            <div class="actions" id="action-buttons" style="justify-content: center;">
+                <form action="/run/simulate" method="post" onsubmit="showLoader()">
+                    <button type="submit" class="btn btn-simulate">Run Simulation & Update View</button>
+                </form>
+            </div>
+            
+            <!-- Loading Animation -->
+            <div class="newtons-cradle" id="loader">
+                <div class="newtons-cradle__dot"></div>
+                <div class="newtons-cradle__dot"></div>
+                <div class="newtons-cradle__dot"></div>
+                <div class="newtons-cradle__dot"></div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Title Probabilities</h3>
+                <img src="/plot/title_race" alt="Title Race Chart">
+            </div>
+            <div class="card">
+                <h3>Relegation Probabilities</h3>
+                <img src="/plot/relegation" alt="Relegation Chart">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Projected Final Standings</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Current Pts</th>
+                        <th>Projected Pts</th>
+                        <th>Title %</th>
+                        <th>Top 4 %</th>
+                        <th>Relegation %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for team in standings %}
+                    <tr class="pos-{{ loop.index }}">
+                        <td>{{ loop.index }}</td>
+                        <td>{{ team['Team'] }}</td>
+                        <td>{{ team['Current Points'] }}</td>
+                        <td>{{ team['Projected Points'] }}</td>
+                        <td>{{ team['Title %'] }}</td>
+                        <td>{{ team['Top 4 %'] }}</td>
+                        <td>{{ team['Relegation %'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('serve_scripts', filename='script.js') }}"></script>
+</body>
+</html>
