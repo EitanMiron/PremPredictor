@@ -56,7 +56,7 @@ def run_simulate():
     try:
         current = get_current_standings()
         if current:
-            df = run_monte_carlo_simulation(current, num_simulations=5000)
+            df = run_monte_carlo_simulation(current, num_simulations=1000)
             df = df.sort_values("Projected Points", ascending=False)
             
             # Save projections
